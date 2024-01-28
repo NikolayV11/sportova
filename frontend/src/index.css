@@ -19,6 +19,7 @@ li {
   font-family: inherit;
   list-style: none;
   font-size: inherit;
+  background-color: inherit;
 }
 
 .container {
@@ -29,5 +30,4 @@ li {
 .border {
   border-radius: 12px;
   border: 1px solid var(--dedfe-7, #dedfe7);
-  background: var(--ffffff, #fff);
 }

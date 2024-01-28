@@ -16,6 +16,57 @@
         }
       }
       &_search {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+        &_btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 46px;
+          height: 46px;
+
+          a {
+            SVG {
+              width: 20px;
+              height: 20px;
+              stroke: #6e7284;
+              fill: #fff;
+              stroke-width: 1;
+            }
+          }
+
+          &_cart {
+            width: 146px;
+            height: 46px;
+            a {
+              display: flex;
+              align-items: center;
+              padding: 8px 12px;
+              gap: 0 12px;
+              SVG {
+                width: 20px;
+                height: 20px;
+              }
+              .box_info {
+                text-align: start;
+                &_title {
+                  color: var(--6-e-7284, #6e7284);
+                  font-size: 13px;
+                  font-weight: 500;
+                  letter-spacing: 0.26px;
+                }
+
+                &_state {
+                  color: var(--a-3-a-6-b-2, #a3a6b2);
+                  font-size: 11px;
+                  font-weight: 400;
+                  letter-spacing: 0.22px;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
