@@ -25,3 +25,9 @@ li {
   margin: 0 auto;
   width: 1180px;
 }
+
+.border {
+  border-radius: 12px;
+  border: 1px solid var(--dedfe-7, #dedfe7);
+  background: var(--ffffff, #fff);
+}

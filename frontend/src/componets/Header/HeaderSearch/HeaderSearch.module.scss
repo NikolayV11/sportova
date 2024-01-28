@@ -1,0 +1,22 @@
+.header {
+  &__search {
+    height: 122px;
+    display: flex;
+    align-items: center;
+    &_items {
+      height: 122px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &_item {
+        &_link {
+          &_logo {
+            height: 64px;
+          }
+        }
+      }
+      &_search {
+      }
+    }
+  }
+}
