@@ -1,0 +1,59 @@
+.header {
+  &__info {
+    background: var(--f-2-f-3-f-4, #f4f5f8);
+    height: 26px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    &_items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &_item {
+      display: flex;
+
+      &:nth-child(1) {
+        button {
+          display: flex;
+          gap: 2px;
+          cursor: pointer;
+          SVG {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        gap: 20px;
+
+        button {
+          background-color: inherit;
+          cursor: pointer;
+        }
+      }
+      a,
+      ul {
+        display: flex;
+        align-items: center;
+      }
+      a {
+        gap: 2px;
+      }
+      a SVG {
+        width: 16px;
+        height: 16px;
+      }
+      ul {
+        gap: 0 20px;
+      }
+    }
+  }
+}
+
+.link_active {
+  color: var(--f-04716, #f04716);
+  font-weight: 600;
+}

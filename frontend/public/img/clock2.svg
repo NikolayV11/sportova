@@ -1,0 +1,19 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+  viewBox="0,0,255.98958,255.98958">
+  <g fill-opacity="0" fill="#fcfcfc" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+    font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+    <path d="M0,255.98958v-255.98958h255.98958v255.98958z" id="bgRectangle"></path>
+  </g>
+  <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+    stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+    <g transform="translate(-0.00521,-0.00521) scale(16,16)">
+      <g id="icons / Clock">
+        <circle cx="8" cy="8" r="5.5" id="Ellipse 21" fill="none" stroke="#0a4ecb"></circle>
+        <path d="M7.5,2.5h1v6h-1z" id="Rectangle 57" fill="#0a4ecb" stroke="none"></path>
+        <path d="M11.5,8v1h-4v-1z" id="Rectangle 58" fill="#0a4ecb" stroke="none"></path>
+      </g>
+    </g>
+  </g>
+</svg>
