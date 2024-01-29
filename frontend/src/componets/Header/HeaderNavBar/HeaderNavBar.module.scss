@@ -1,5 +1,6 @@
 .header {
   &__nav {
+    color: #fff;
     height: 52px;
     background: var(--0-a-4-ecb, #0a4ecb);
 
@@ -16,6 +17,12 @@
           align-items: center;
           justify-content: center;
           gap: 0 50px;
+
+          li {
+            a {
+              color: #fff;
+            }
+          }
         }
       }
       &_sale {
@@ -23,6 +30,7 @@
           display: flex;
           gap: 6px;
 
+          color: #fffa2f;
           SVG {
             width: 16px;
             height: 16px;
