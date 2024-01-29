@@ -1,0 +1,35 @@
+.header {
+  &__nav {
+    height: 52px;
+    background: var(--0-a-4-ecb, #0a4ecb);
+
+    &_items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &_catalog {
+      }
+      &_catalogNav {
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0 50px;
+        }
+      }
+      &_sale {
+        a {
+          display: flex;
+          gap: 6px;
+
+          SVG {
+            width: 16px;
+            height: 16px;
+            fill: #0a4ecb;
+          }
+        }
+      }
+    }
+  }
+}

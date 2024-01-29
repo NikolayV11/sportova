@@ -4,13 +4,14 @@ import { HandySvg } from "handy-svg";
 
 import styles from "./styles.module.scss";
 
-import { HeaderInfo, HeaderSearch } from "../index";
+import { HeaderInfo, HeaderSearch, HeaderNavBar } from "../index";
 
 export function Header() {
   return (
     <header className="header">
       <HeaderInfo />
       <HeaderSearch />
+      <HeaderNavBar />
     </header>
   );
 }
