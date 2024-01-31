@@ -32,7 +32,7 @@ export function HeaderInfo() {
                   <li key={item.title}>
                     <Link
                       onClick={() => setActiveLink(index)}
-                      className={activeLink === index && styles.link_active}
+                      className={activeLink === index ? styles.link_active : ""}
                       to={item.link}>
                       {item.title}
                     </Link>

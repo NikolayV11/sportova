@@ -1,50 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { HandySvg } from "handy-svg";
-import { useAppDispatch } from "../../../redux/store";
-import { setActiveCatalog, selectCount } from "../../../redux/catalog";
-
-import styles from "./HeaderCatalog.module.scss";
-
-import { ListCatalog } from "../../index";
-import { useSelector } from "react-redux";
-
-export type typeList2 = {
-  title: string;
-  link: string;
-  list?: [];
-}[];
-export type typeList3 = {
-  title: string;
-  link: string;
-  list: typeList2;
-}[];
-
-export type typeList = {
-  title: string;
-  link: string;
-  list: typeList3;
-}[];
-
-const listCa: typeList = [
+const listCa = [
   {
-    title: "Щведские стенки1",
+    title: "Щведские стенки",
     link: "*",
     list: [
       {
-        title: "Щведские стенки2-1",
-        link: "*",
-        list: [
-          { title: "Скамьи для пресса3", link: "*" },
-          { title: "Скамьи универсальные3", link: "*" },
-          { title: "Скамья Скотта3", link: "*" },
-          { title: "Скамьи с опциями3", link: "*" },
-          { title: "Скамьи со стойками3", link: "*" },
-          { title: "Гиперэкстензия3", link: "*" },
-        ],
-      },
-      {
-        title: "Мультистанции2-2",
+        title: "",
         link: "*",
         list: [
           { title: "Скамьи для пресса", link: "*" },
@@ -56,19 +16,7 @@ const listCa: typeList = [
         ],
       },
       {
-        title: "Тренажеры для ног2-3",
-        link: "*",
-        list: [
-          { title: "Скамьи для пресса-", link: "*" },
-          { title: "Скамьи универсальные", link: "*" },
-          { title: "Скамья Скотта", link: "*" },
-          { title: "Скамьи с опциями", link: "*" },
-          { title: "Скамьи со стойками", link: "*" },
-          { title: "Гиперэкстензия", link: "*" },
-        ],
-      },
-      {
-        title: "Силовые рамы2-4",
+        title: "Мультистанции",
         link: "*",
         list: [
           { title: "Скамьи для пресса", link: "*" },
@@ -80,7 +28,31 @@ const listCa: typeList = [
         ],
       },
       {
-        title: "Турники и брусья2-5",
+        title: "Тренажеры для ног",
+        link: "*",
+        list: [
+          { title: "Скамьи для пресса", link: "*" },
+          { title: "Скамьи универсальные", link: "*" },
+          { title: "Скамья Скотта", link: "*" },
+          { title: "Скамьи с опциями", link: "*" },
+          { title: "Скамьи со стойками", link: "*" },
+          { title: "Гиперэкстензия", link: "*" },
+        ],
+      },
+      {
+        title: "Силовые рамы",
+        link: "*",
+        list: [
+          { title: "Скамьи для пресса", link: "*" },
+          { title: "Скамьи универсальные", link: "*" },
+          { title: "Скамья Скотта", link: "*" },
+          { title: "Скамьи с опциями", link: "*" },
+          { title: "Скамьи со стойками", link: "*" },
+          { title: "Гиперэкстензия", link: "*" },
+        ],
+      },
+      {
+        title: "Турники и брусья",
         link: "*",
         list: [
           { title: "Скамьи для пресса", link: "*" },
@@ -1085,24 +1057,4 @@ const listCa: typeList = [
   },
 ];
 
-export function HeaderCatalog() {
-  const status = useSelector(selectCount);
-  const dispatch = useAppDispatch();
-  return (
-    <div className={styles.catalog}>
-      <button
-        onClick={() => {
-          dispatch(setActiveCatalog(!status));
-        }}
-        className={styles.catalog__nav_btn}>
-        <HandySvg src="/img/menu.svg" />
-        <p>Каталог товаров</p> <HandySvg src="/img/staticCategory.svg" />
-      </button>
-      <nav className={styles.catalog__nav__block}>
-        <div className={styles.catalog__nav__block_item}>
-          <ListCatalog listData={listCa} numberMenu={0} />
-        </div>
-      </nav>
-    </div>
-  );
-}
+export default listCa;

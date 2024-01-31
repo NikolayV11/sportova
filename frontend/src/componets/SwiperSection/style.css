@@ -1,0 +1,58 @@
+.swiper {
+  width: 780px;
+  height: 480px;
+}
+.swipers_top .swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 3px;
+
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+  color: #7b7d87c3;
+
+  width: 30px;
+  left: auto;
+  right: 68px;
+  bottom: 28px;
+}
+.swipers_top .swiper-button-prev {
+  top: auto;
+  left: auto;
+  right: 112px;
+  bottom: 20px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #8b919da3;
+}
+.swipers_top .swiper-button-prev::after {
+  content: "";
+  background-image: url("./btn_prev.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 15px;
+  height: 16px;
+}
+
+.swipers_top .swiper-button-next {
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #8b919da3;
+}
+.swipers_top .swiper-button-next::after {
+  content: "";
+  background-image: url("./btn_next.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 15px;
+  height: 16px;
+}

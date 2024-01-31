@@ -20,7 +20,14 @@
 
           li {
             a {
-              color: #fff;
+              display: inline-flex;
+              align-items: center;
+              padding: 0 3px;
+              height: 52px;
+            }
+
+            &:hover {
+              background-color: #4788ff;
             }
           }
         }
@@ -28,13 +35,20 @@
       &_sale {
         a {
           display: flex;
+          align-items: center;
           gap: 6px;
+          padding: 0 3px;
+          height: 52px;
 
           color: #fffa2f;
           SVG {
             width: 16px;
             height: 16px;
             fill: #0a4ecb;
+          }
+
+          &:hover {
+            background-color: #4788ff;
           }
         }
       }

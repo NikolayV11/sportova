@@ -1,3 +1,15 @@
+:root {
+  --colorBtn-hover: #4788ff;
+  --color-backgr: #0a4ecb;
+  --04358-f: #04358f;
+  --color-Backgr2: #1d1e22;
+  --color-Backgr3: #36383f;
+  --6-e-7284: #6e7284;
+  --btn-hover-cart: #f04716;
+  --dedfe-7: #dedfe7;
+  --color-sale: #fffa2f;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -15,10 +27,10 @@ li {
   outline: none;
   border: none;
   text-decoration: none;
-  color: black;
+  color: inherit;
   font-family: inherit;
   list-style: none;
-  font-size: 14px;
+  font-size: inherit;
   background-color: inherit;
 }
 
@@ -32,4 +44,11 @@ SVG {
 .border {
   border-radius: 12px;
   border: 1px solid var(--dedfe-7, #dedfe7);
+}
+
+.catalog_1 {
+  background-color: var(--color-Backgr2, #1d1e22);
+}
+.catalog_2 {
+  background-color: var(--color-Backgr3, #36383f);
 }
