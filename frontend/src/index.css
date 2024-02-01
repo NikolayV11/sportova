@@ -31,12 +31,15 @@ li {
   font-family: inherit;
   list-style: none;
   font-size: inherit;
-  background-color: inherit;
 }
 
 .container {
   margin: 0 auto;
   width: 1180px;
+}
+.container_product {
+  margin: 0 auto;
+  width: 1332px;
 }
 SVG {
   fill: #fff;

@@ -1,6 +1,7 @@
-.swiper {
+.swipers_top {
   width: 780px;
   height: 480px;
+  border-radius: 12px;
 }
 .swipers_top .swiper-pagination {
   display: flex;
@@ -72,10 +73,10 @@
   */
 }
 .swiper-scrollbar {
-  border-radius: var(--swiper-scrollbar-border-radius, 10px);
+  border-radius: 10px;
   position: relative;
   touch-action: none;
-  background: var(--swiper-scrollbar-bg-color, rgba(0, 0, 0, 0.1));
+  background: rgba(0, 0, 0, 0.1);
 }
 .swiper-scrollbar-disabled > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-disabled {

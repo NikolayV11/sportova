@@ -78,7 +78,6 @@ export function SwiperSection() {
           );
         })}
       </Swiper>
-      <div className="swiper-pagination"></div>
     </div>
   );
 }

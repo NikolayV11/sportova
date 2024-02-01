@@ -1,0 +1,40 @@
+.swedish-walls {
+  height: 520px;
+}
+.swedish-walls > .swiper-button-prev {
+  position: absolute;
+  background-color: #f2f3f4;
+  border: 1px solid #dedfe7;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+}
+.swedish-walls > .swiper-button-prev::after {
+  content: "";
+  right: 0;
+  background-image: url(./prev.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 6px;
+  height: 12px;
+}
+.swedish-walls > .swiper-button-next {
+  position: absolute;
+  border: 1px solid #dedfe7;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+}
+.swedish-walls > .swiper-button-next::after {
+  content: "";
+  background-image: url(./next.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 6px;
+  height: 12px;
+}
+.swedish-walls {
+  margin-top: 20px;
+}

@@ -1,51 +1,59 @@
 .main {
   padding-top: 20px;
+  background-color: #f2f3f4;
   .section_top {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    height: 480px;
+    &_items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+      height: 480px;
 
-    &_item {
-      height: 230px;
-      background-repeat: no-repeat;
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-
-      h3 {
-        width: 250px;
-        margin-top: 30px;
-        color: #36383f;
-        font-size: 18px;
-        font-weight: 800;
-        line-height: 22px;
-      }
-      p {
-        margin-top: 20px;
-        width: 222px;
-        color: var(--36383-f, #36383f);
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 24px;
-      }
-      a {
-        margin-top: auto;
-        margin-bottom: 30px;
+      &_item {
+        height: 230px;
+        border-radius: 12px;
+        background-repeat: no-repeat;
+        padding-left: 20px;
         display: flex;
-        align-items: center;
-        color: var(--0-a-4-ecb, #0a4ecb);
-        font-family: Montserrat;
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 19px;
+        flex-direction: column;
 
-        SVG {
-          width: 16px;
-          height: 16px;
+        h3 {
+          width: 250px;
+          margin-top: 30px;
+          color: #36383f;
+          font-size: 18px;
+          font-weight: 800;
+          line-height: 22px;
+        }
+        p {
+          margin-top: 20px;
+          width: 222px;
+          color: var(--36383-f, #36383f);
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+        a {
+          margin-top: auto;
+          margin-bottom: 30px;
+          display: flex;
+          align-items: center;
+          color: var(--0-a-4-ecb, #0a4ecb);
+          font-family: Montserrat;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 19px;
+
+          SVG {
+            width: 16px;
+            height: 16px;
+          }
         }
       }
     }
+  }
+  .swedish_walls {
+    margin-top: 60px;
+    height: 760px;
   }
 }
