@@ -1,5 +1,6 @@
 .swedish-walls {
-  height: 520px;
+  height: 560px;
+  margin-top: 20px;
 }
 .swedish-walls > .swiper-button-prev {
   position: absolute;
@@ -35,6 +36,6 @@
   width: 6px;
   height: 12px;
 }
-.swedish-walls {
-  margin-top: 20px;
-}
+/* .swedish-walls {
+ 
+} */

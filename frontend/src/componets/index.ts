@@ -7,3 +7,4 @@ export * from "./Header/HeaderCatalog";
 export * from "./Header/HeaderCatalog/ListCatalog";
 export * from "./SwiperSection";
 export * from "./SwedishWalls";
+export * from "./CardWall";
