@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { HandySvg } from "handy-svg";
 
 import styles from "./ListCatalog.module.scss";
-import { typeList, typeList2, typeList3 } from "../../../index";
-import listCa from "./../json";
+import { typeList, typeList2, typeList3 } from "../../../../Type";
 
 export function ListCatalog({
   listData,

@@ -1,12 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./SwedishWalls.module.scss";
 import "./style.css";
 import "swiper/css";
-import { HandySvg } from "handy-svg";
-import { CardWall } from "../index";
+import { CardStreetSports, CardWall } from "../index";
 import { typeCard } from "../../Type";
 
 const cards: typeCard[] = [
@@ -60,7 +58,7 @@ const cards: typeCard[] = [
     price: { price: 10990, discount: 14990 },
   },
 ];
-export function SwedishWalls() {
+export function StreetSports() {
   return (
     <div className="container">
       <div className={styles.swiper_conteiner}>
@@ -88,7 +86,7 @@ export function SwedishWalls() {
           {cards.map((item, index) => {
             return (
               <SwiperSlide>
-                <CardWall heightImg={320} heightCard={520} {...item} />
+                <CardStreetSports heightImg={320} heightCard={520} {...item} />
               </SwiperSlide>
             );
           })}
