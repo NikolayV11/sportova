@@ -72,7 +72,7 @@ export function SwedishWalls() {
   return (
     <div className="container">
       <div className={styles.swiper_conteiner}>
-        <h2>Шведские стенки</h2>
+        <h2 className={styles.swiper_conteiner_title}>Шведские стенки</h2>
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -83,13 +83,13 @@ export function SwedishWalls() {
               spaceBetween: 20,
             },
             768: {
-              slidesPerView: 3,
+              slidesPerView: 4,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 4,
               spaceBetween: 40,
             },
-            // 1024: {
-            //   slidesPerView: 4,
-            //   spaceBetween: 40,
-            // },
           }}
           modules={[Navigation]}
           className="swedish-walls">

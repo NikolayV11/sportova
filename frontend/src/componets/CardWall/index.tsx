@@ -8,11 +8,19 @@ export function CardWall({ id, title, link, urlImg, price }: typeCard) {
   return (
     <div key={id} className={styles.card_item}>
       <div className={styles.card_item_block_btn}>
-        <button>
-          <HandySvg src="/img/product_comparison_add.svg" />
+        <button className={styles.card_item_block_btn__cart}>
+          <HandySvg
+            src="/img/product_comparison_add.svg"
+            className={styles.card_item_block_btn__cart_add}
+          />
+          <HandySvg className={styles.card_item_block_btn__cart_status} src="/img/add_hover.svg" />
         </button>
-        <button>
-          <HandySvg src="/img/favorites_add.svg" />
+        <button className={styles.card_item_block_btn__favorites}>
+          <HandySvg src="/img/favorite.svg" className={styles.card_item_block_btn__favorites_add} />
+          <HandySvg
+            className={styles.card_item_block_btn__favorites_status}
+            src="/img/add_hover.svg"
+          />
         </button>
       </div>
       <img className={styles.card_item_img} src={urlImg} alt="" />
@@ -27,8 +35,15 @@ export function CardWall({ id, title, link, urlImg, price }: typeCard) {
           <p className={styles.card_item_block_priceBtn_price_price}>{price.price} ₽</p>
         </div>
         <div className={styles.card_item_block_priceBtn_btn}>
-          <button>
-            <HandySvg src="/img/card_btn_cart.svg" />
+          <button className={`${styles.card_item_block_priceBtn_btn_block} btnHover`}>
+            <HandySvg
+              className={styles.card_item_block_priceBtn_btn_block_cart}
+              src="/img/card_btn_cart.svg"
+            />{" "}
+            <HandySvg
+              className={`${styles.card_item_block_priceBtn_btn_block_status} SVGstatus`}
+              src="/img/add_hover.svg"
+            />
           </button>
         </div>
       </div>

@@ -61,9 +61,10 @@ export function SwiperSection() {
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => {
           swiper.updateSlidesClasses();
-          console.log(swiper);
+          // console.log(swiper);
         }}
-        onSlideChange={() => console.log("slide change")}>
+        // onSlideChange={() => console.log("slide change")}
+      >
         {arrSlider.map((item, index) => {
           return (
             <SwiperSlide className={styles.swiper__block_item} key={index}>

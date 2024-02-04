@@ -16,8 +16,8 @@ body {
   font-family: Montserrat;
 }
 
-*,
 a,
+p,
 button,
 input,
 ul,
@@ -42,7 +42,7 @@ li {
   width: 1332px;
 }
 SVG {
-  fill: #fff;
+  /* fill: #fff; */
 }
 .border {
   border-radius: 12px;
