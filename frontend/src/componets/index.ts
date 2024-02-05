@@ -9,3 +9,4 @@ export * from "./SwiperSection";
 export * from "./SwedishWalls";
 export * from "./StreetSports";
 export * from "./CardHome";
+export * from "./Weightlifting";

@@ -1,11 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./SwedishWalls.module.scss";
 
 import "swiper/css";
-import { HandySvg } from "handy-svg";
 import { CardHome } from "../index";
 import { typeCard } from "../../Type";
 
