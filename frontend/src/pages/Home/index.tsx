@@ -41,7 +41,7 @@ export function Home() {
       <section className={styles.street_sports}>
         <StreetSports />
       </section>
-      <section className={styles.street_sports}>
+      <section className={styles.weightlifting}>
         <Weightlifting />
       </section>
     </main>
