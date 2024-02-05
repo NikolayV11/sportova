@@ -3,7 +3,7 @@
   --color-backgr: #0a4ecb;
   --04358-f: #04358f;
   --color-Backgr2: #1d1e22;
-  --color-Backgr3: #36383f;
+  /* --color-Backgr3: #36383f; */
   --6-e-7284: #6e7284;
   --btn-hover-cart: #f04716;
   --dedfe-7: #dedfe7;
@@ -53,5 +53,8 @@ SVG {
   background-color: var(--color-Backgr2, #1d1e22);
 }
 .catalog_2 {
-  background-color: var(--color-Backgr3, #36383f);
+  background-color: var(--color-Backgr3, #4d4d4d);
+}
+.catalog_n {
+  background-color: #000000;
 }

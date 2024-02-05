@@ -1,7 +1,49 @@
 .catalog {
-  width: 400px;
-  height: 300px;
-  li {
-    // position: absolute;
+  padding: 20px 0;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+
+  height: 590px;
+  &_list {
+    padding: 5px 20px;
+    cursor: pointer;
+
+    a {
+      display: block;
+      position: relative;
+      SVG {
+        position: absolute;
+        left: auto;
+        top: 3px;
+        right: 0px;
+        width: 0.9em;
+        height: 0.8em;
+        stroke: #fff;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    &:hover {
+      background: linear-gradient(to right, RGB(29, 30, 34), 80%, RGB(10, 78, 203));
+    }
+
+    &_block {
+      position: absolute;
+      top: 0;
+      left: auto;
+      right: 0;
+      transition: all 3s ease-in-out;
+    }
   }
+}
+
+.catalog_1 {
+  right: -280px;
+}
+.catalog_2 {
+  right: -280px;
+}
+.catalog_n {
 }

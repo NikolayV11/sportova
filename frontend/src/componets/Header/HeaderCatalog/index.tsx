@@ -13,14 +13,13 @@ import { typeList } from "../../../Type";
 const listCa: typeList = [
   {
     title: "Щведские стенки1",
-    link: "*",
     list: [
       {
         title: "Щведские стенки2-1",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса3", link: "*" },
-          { title: "Скамьи универсальные3", link: "*" },
+          { title: "Скамьи универсальные3" },
           { title: "Скамья Скотта3", link: "*" },
           { title: "Скамьи с опциями3", link: "*" },
           { title: "Скамьи со стойками3", link: "*" },
@@ -29,7 +28,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции2-2",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -41,9 +40,9 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног2-3",
-        link: "*",
+
         list: [
-          { title: "Скамьи для пресса-", link: "*" },
+          { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
           { title: "Скамья Скотта", link: "*" },
           { title: "Скамьи с опциями", link: "*" },
@@ -53,7 +52,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы2-4",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -65,7 +64,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья2-5",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -79,11 +78,11 @@ const listCa: typeList = [
   },
   {
     title: "Турники",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -96,18 +95,10 @@ const listCa: typeList = [
       {
         title: "Мультистанции",
         link: "*",
-        list: [
-          { title: "Скамьи для пресса", link: "*" },
-          { title: "Скамьи универсальные", link: "*" },
-          { title: "Скамья Скотта", link: "*" },
-          { title: "Скамьи с опциями", link: "*" },
-          { title: "Скамьи со стойками", link: "*" },
-          { title: "Гиперэкстензия", link: "*" },
-        ],
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -119,7 +110,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -132,90 +123,20 @@ const listCa: typeList = [
       {
         title: "Турники и брусья",
         link: "*",
-        list: [
-          { title: "Скамьи для пресса", link: "*" },
-          { title: "Скамьи универсальные", link: "*" },
-          { title: "Скамья Скотта", link: "*" },
-          { title: "Скамьи с опциями", link: "*" },
-          { title: "Скамьи со стойками", link: "*" },
-          { title: "Гиперэкстензия", link: "*" },
-        ],
       },
     ],
   },
   {
     title: "Уличные комплексы",
     link: "*",
-    list: [
-      {
-        title: "Силовые скамьи и стойки",
-        link: "*",
-        list: [
-          { title: "Скамьи для пресса", link: "*" },
-          { title: "Скамьи универсальные", link: "*" },
-          { title: "Скамья Скотта", link: "*" },
-          { title: "Скамьи с опциями", link: "*" },
-          { title: "Скамьи со стойками", link: "*" },
-          { title: "Гиперэкстензия", link: "*" },
-        ],
-      },
-      {
-        title: "Мультистанции",
-        link: "*",
-        list: [
-          { title: "Скамьи для пресса", link: "*" },
-          { title: "Скамьи универсальные", link: "*" },
-          { title: "Скамья Скотта", link: "*" },
-          { title: "Скамьи с опциями", link: "*" },
-          { title: "Скамьи со стойками", link: "*" },
-          { title: "Гиперэкстензия", link: "*" },
-        ],
-      },
-      {
-        title: "Тренажеры для ног",
-        link: "*",
-        list: [
-          { title: "Скамьи для пресса", link: "*" },
-          { title: "Скамьи универсальные", link: "*" },
-          { title: "Скамья Скотта", link: "*" },
-          { title: "Скамьи с опциями", link: "*" },
-          { title: "Скамьи со стойками", link: "*" },
-          { title: "Гиперэкстензия", link: "*" },
-        ],
-      },
-      {
-        title: "Силовые рамы",
-        link: "*",
-        list: [
-          { title: "Скамьи для пресса", link: "*" },
-          { title: "Скамьи универсальные", link: "*" },
-          { title: "Скамья Скотта", link: "*" },
-          { title: "Скамьи с опциями", link: "*" },
-          { title: "Скамьи со стойками", link: "*" },
-          { title: "Гиперэкстензия", link: "*" },
-        ],
-      },
-      {
-        title: "Турники и брусья",
-        link: "*",
-        list: [
-          { title: "Скамьи для пресса", link: "*" },
-          { title: "Скамьи универсальные", link: "*" },
-          { title: "Скамья Скотта", link: "*" },
-          { title: "Скамьи с опциями", link: "*" },
-          { title: "Скамьи со стойками", link: "*" },
-          { title: "Гиперэкстензия", link: "*" },
-        ],
-      },
-    ],
   },
   {
     title: "Тяжелая атлетика",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -227,7 +148,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -239,7 +160,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -251,7 +172,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -263,7 +184,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -277,11 +198,11 @@ const listCa: typeList = [
   },
   {
     title: "Стойки под штангу",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -293,7 +214,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -305,7 +226,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -317,7 +238,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -329,7 +250,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -343,23 +264,15 @@ const listCa: typeList = [
   },
   {
     title: "Единоборства",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
         link: "*",
-        list: [
-          { title: "Скамьи для пресса", link: "*" },
-          { title: "Скамьи универсальные", link: "*" },
-          { title: "Скамья Скотта", link: "*" },
-          { title: "Скамьи с опциями", link: "*" },
-          { title: "Скамьи со стойками", link: "*" },
-          { title: "Гиперэкстензия", link: "*" },
-        ],
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -371,7 +284,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -383,7 +296,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -395,7 +308,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -409,11 +322,10 @@ const listCa: typeList = [
   },
   {
     title: "Фитнес",
-    link: "*",
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -425,7 +337,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -437,7 +349,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -449,7 +361,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -461,7 +373,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -475,11 +387,11 @@ const listCa: typeList = [
   },
   {
     title: "Единоборства",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -491,7 +403,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -503,7 +415,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -515,7 +427,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -527,7 +439,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -541,11 +453,11 @@ const listCa: typeList = [
   },
   {
     title: "Тубинги",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -557,7 +469,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -569,7 +481,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -581,7 +493,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -593,7 +505,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -607,11 +519,11 @@ const listCa: typeList = [
   },
   {
     title: "Батуты",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -623,7 +535,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -635,7 +547,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -647,7 +559,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -659,7 +571,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -673,11 +585,11 @@ const listCa: typeList = [
   },
   {
     title: "Бассейны",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -689,7 +601,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -701,7 +613,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -713,7 +625,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -725,7 +637,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -739,11 +651,11 @@ const listCa: typeList = [
   },
   {
     title: "Рюкзаки и сумки",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -755,7 +667,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -767,7 +679,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -779,7 +691,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -791,7 +703,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -805,11 +717,11 @@ const listCa: typeList = [
   },
   {
     title: "Новогодние ёлки",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -821,7 +733,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -833,7 +745,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -845,7 +757,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -857,7 +769,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -871,11 +783,11 @@ const listCa: typeList = [
   },
   {
     title: "Детские игрушки",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -887,7 +799,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -899,7 +811,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -911,7 +823,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -923,7 +835,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -937,11 +849,11 @@ const listCa: typeList = [
   },
   {
     title: "Самокаты",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -953,7 +865,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -965,7 +877,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -977,7 +889,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -989,7 +901,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -1003,11 +915,11 @@ const listCa: typeList = [
   },
   {
     title: "Велосипеды",
-    link: "*",
+
     list: [
       {
         title: "Силовые скамьи и стойки",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -1019,7 +931,7 @@ const listCa: typeList = [
       },
       {
         title: "Мультистанции",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -1031,7 +943,7 @@ const listCa: typeList = [
       },
       {
         title: "Тренажеры для ног",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -1043,7 +955,7 @@ const listCa: typeList = [
       },
       {
         title: "Силовые рамы",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -1055,7 +967,7 @@ const listCa: typeList = [
       },
       {
         title: "Турники и брусья",
-        link: "*",
+
         list: [
           { title: "Скамьи для пресса", link: "*" },
           { title: "Скамьи универсальные", link: "*" },
@@ -1072,9 +984,31 @@ const listCa: typeList = [
 export function HeaderCatalog() {
   const status = useSelector(selectCount);
   const dispatch = useAppDispatch();
+
+  const catalogRef = React.useRef<HTMLButtonElement>();
+
+  // клик вне компоента
+  React.useEffect(() => {
+    const handleClickOutside = (
+      event: MouseEvent & {
+        composedPath: (tar?: HTMLElement) => EventTarget[];
+      },
+    ) => {
+      console.log("click", event.composedPath());
+      if (!event.composedPath().includes(catalogRef.current)) {
+        dispatch(setActiveCatalog(false));
+      }
+    };
+    document.body.addEventListener("click", handleClickOutside);
+    return () => {
+      document.body.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className={styles.catalog}>
       <button
+        ref={catalogRef}
         onClick={() => {
           dispatch(setActiveCatalog(!status));
         }}
@@ -1082,7 +1016,8 @@ export function HeaderCatalog() {
         <HandySvg src="/img/menu.svg" />
         <p>Каталог товаров</p> <HandySvg src="/img/staticCategory.svg" />
       </button>
-      <nav className={styles.catalog__nav__block}>
+      <nav
+        className={`${status ? styles.catalog__nav__block_active : styles.catalog__nav__block} `}>
         <div className={styles.catalog__nav__block_item}>
           <ListCatalog listData={listCa} numberMenu={0} />
         </div>

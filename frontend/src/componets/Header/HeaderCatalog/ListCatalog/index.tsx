@@ -5,6 +5,10 @@ import { HandySvg } from "handy-svg";
 import styles from "./ListCatalog.module.scss";
 import { typeList, typeList2, typeList3 } from "../../../../Type";
 
+import { useAppDispatch } from "../../../../redux/store";
+import { setActiveCatalog, selectCount } from "../../../../redux/catalog";
+import { useSelector } from "react-redux";
+
 export function ListCatalog({
   listData,
   numberMenu,
@@ -14,6 +18,9 @@ export function ListCatalog({
 }) {
   const [status, setStatus] = React.useState(false);
   const [menuOpen, setMenuOpen] = React.useState(0);
+
+  const statusCatalog = useSelector(selectCount);
+  const dispatch = useAppDispatch();
 
   if (!listData) {
     return <></>;
@@ -26,6 +33,7 @@ export function ListCatalog({
       {listData.map((item, index) => {
         return (
           <li
+            className={`${styles.catalog_list}`}
             key={index + item.title}
             onMouseOver={() => {
               setStatus(true);
@@ -35,13 +43,22 @@ export function ListCatalog({
               setStatus(false);
               setMenuOpen(index);
             }}>
-            <Link to={item.link}>{item.title}</Link>
+            <Link className={`${styles.catalog_list_link}`} to={item?.link && item.link}>
+              {item.title}
+              {!item?.link && <HandySvg src="/img/right.svg" />}
+            </Link>
+
             {item.list && (
               <div
+                className={`${styles.catalog_list_block} ${
+                  numberMenu === 0
+                    ? styles.catalog_1
+                    : numberMenu === 1
+                    ? styles.catalog_2
+                    : styles.catalog_n
+                }`}
                 style={{
                   display: `${status && menuOpen === index ? "block" : "none"}`,
-                  position: "absolute",
-                  right: "-100px",
                 }}>
                 <ListCatalog listData={item.list} numberMenu={numberMenu + 1} />
               </div>
