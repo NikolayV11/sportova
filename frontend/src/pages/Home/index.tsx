@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HandySvg } from "handy-svg";
-
+import "../../css/style.css";
 import styles from "./Home.module.scss";
 
 import { SwiperSection, SwedishWalls, StreetSports } from "../../componets";

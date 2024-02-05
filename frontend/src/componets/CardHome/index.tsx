@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HandySvg } from "handy-svg";
 import { typeCard } from "../../Type";
-import styles from "./cardWall.module.scss";
+import styles from "./CardHome.module.scss";
 
-export function CardWall({ id, title, link, urlImg, price, heightImg, heightCard }: typeCard) {
+export function CardHome({ id, title, link, urlImg, price, heightImg, heightCard }: typeCard) {
   return (
     <div key={id} style={{ height: `${heightCard}px` }} className={styles.card_item}>
       <div className={styles.card_item_block_btn}>
