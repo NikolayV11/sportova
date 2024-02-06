@@ -50,7 +50,14 @@ export function ListCatalog({
             }}>
             <Link className={`${styles.catalog_list_link}`} to={item?.link && item.link}>
               {item.title}
-              {!item?.link && <HandySvg src="/img/right.svg" />}
+              {!item?.link && (
+                <span
+                  className={`${`${
+                    status && menuOpen === index ? styles.catalog_list_link_span : ""
+                  }`}`}>
+                  <HandySvg src="/img/right.svg" />
+                </span>
+              )}
             </Link>
 
             {item.list && (

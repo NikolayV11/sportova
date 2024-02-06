@@ -13,20 +13,26 @@
     a {
       display: block;
       position: relative;
-      SVG {
+      span {
         position: absolute;
         left: auto;
         top: 3px;
         right: 0px;
-        width: 0.9em;
-        height: 0.8em;
         stroke: #fff;
         transition: all 0.5s ease-in-out;
+
+        SVG {
+          width: 0.9em;
+          height: 0.8em;
+        }
       }
     }
 
     &:hover {
       background: linear-gradient(to right, RGB(29, 30, 34), 80%, RGB(10, 78, 203));
+      .catalog_list_link_span {
+        right: -10px;
+      }
     }
 
     &_block {
