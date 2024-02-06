@@ -42,6 +42,11 @@ export function ListCatalog({
             onMouseOut={() => {
               setStatus(false);
               setMenuOpen(index);
+            }}
+            onClick={() => {
+              if (item.link) {
+                dispatch(setActiveCatalog(false));
+              }
             }}>
             <Link className={`${styles.catalog_list_link}`} to={item?.link && item.link}>
               {item.title}

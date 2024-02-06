@@ -983,9 +983,10 @@ const listCa: typeList = [
 
 export function HeaderCatalog() {
   const status = useSelector(selectCount);
+
   const dispatch = useAppDispatch();
 
-  const catalogRef = React.useRef<HTMLButtonElement>();
+  const catalogRef = React.useRef<HTMLDivElement>();
 
   // клик вне компоента
   React.useEffect(() => {
@@ -1006,9 +1007,8 @@ export function HeaderCatalog() {
   }, []);
 
   return (
-    <div className={styles.catalog}>
+    <div ref={catalogRef} className={styles.catalog}>
       <button
-        ref={catalogRef}
         onClick={() => {
           dispatch(setActiveCatalog(!status));
         }}
