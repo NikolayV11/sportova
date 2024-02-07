@@ -4,7 +4,13 @@ import { HandySvg } from "handy-svg";
 import "../../css/style.css";
 import styles from "./Home.module.scss";
 
-import { SwiperSection, SwedishWalls, StreetSports, Weightlifting } from "../../componets";
+import {
+  SwiperSection,
+  SwedishWalls,
+  StreetSports,
+  Weightlifting,
+  SectionCategoryHome,
+} from "../../componets";
 export function Home() {
   return (
     <main className={styles.main}>
@@ -43,6 +49,9 @@ export function Home() {
       </section>
       <section className={styles.weightlifting}>
         <Weightlifting />
+      </section>
+      <section className={styles.category}>
+        <SectionCategoryHome />
       </section>
     </main>
   );

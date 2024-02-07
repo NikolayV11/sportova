@@ -10,3 +10,5 @@ export * from "./SwedishWalls";
 export * from "./StreetSports";
 export * from "./CardHome";
 export * from "./Weightlifting";
+export * from "./CategoryMap";
+export * from "./SectionCategoryHome";
