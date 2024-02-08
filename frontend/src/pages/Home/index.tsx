@@ -10,6 +10,7 @@ import {
   StreetSports,
   Weightlifting,
   SectionCategoryHome,
+  AboutCompany,
 } from "../../componets";
 export function Home() {
   return (
@@ -52,6 +53,9 @@ export function Home() {
       </section>
       <section className={styles.category}>
         <SectionCategoryHome />
+      </section>
+      <section className={styles.about_company}>
+        <AboutCompany />
       </section>
     </main>
   );

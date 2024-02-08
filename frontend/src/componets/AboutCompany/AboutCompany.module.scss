@@ -1,0 +1,97 @@
+.about_company {
+  margin-top: 90px;
+
+  &__info {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      max-width: 780px;
+      color: #36383f;
+      line-height: 24px;
+      font-size: 18px;
+    }
+
+    a {
+      align-self: flex-end;
+      position: relative;
+      padding-right: 15px;
+      color: rgb(10, 78, 203);
+      font-size: 18px;
+      font-weight: 500;
+    }
+    a:after {
+      content: "";
+      display: flex;
+
+      position: absolute;
+      top: 7px;
+      left: auto;
+      right: 0;
+
+      width: 5px;
+      height: 6px;
+
+      background-image: url(./icon.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__about_services {
+    margin-top: 20px;
+    &_min {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 20px;
+
+      &_item {
+        width: 280px;
+        height: 140px;
+        border-radius: 12px;
+        background-color: #fff;
+        a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0 23px;
+
+          img {
+            width: 54px;
+            height: 54px;
+          }
+
+          p {
+            width: 150px;
+            font-size: 15px;
+            line-height: 21px;
+            color: #36383f;
+          }
+          p:nth-child(3) {
+            word-spacing: 999px;
+          }
+        }
+      }
+      &_item:nth-child(3) {
+        a {
+          p {
+            word-spacing: 5px;
+          }
+        }
+      }
+    }
+
+    &_wide {
+      margin-top: 20px;
+
+      &_swiper {
+        width: 580px;
+      }
+    }
+  }
+}

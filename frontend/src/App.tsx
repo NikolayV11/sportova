@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import { selectCount } from "./redux/catalog";
 function App() {
   const count = useSelector(selectCount);
-  console.log(count);
   return (
     <div className="App">
       <Header />

@@ -12,3 +12,5 @@ export * from "./CardHome";
 export * from "./Weightlifting";
 export * from "./CategoryMap";
 export * from "./SectionCategoryHome";
+export * from "./AboutCompany";
+export * from "./ComponentSwaiper";

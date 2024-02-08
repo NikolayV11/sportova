@@ -995,7 +995,7 @@ export function HeaderCatalog() {
         composedPath: (tar?: HTMLElement) => EventTarget[];
       },
     ) => {
-      console.log("click", event.composedPath());
+      //console.log("click", event.composedPath());
       if (!event.composedPath().includes(catalogRef.current)) {
         dispatch(setActiveCatalog(false));
       }
