@@ -85,7 +85,7 @@ export function SwedishWalls() {
           className="swedish-walls">
           {cards.map((item, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <CardHome heightImg={320} heightCard={520} {...item} />
               </SwiperSlide>
             );

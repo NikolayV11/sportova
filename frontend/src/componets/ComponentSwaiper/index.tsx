@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./ComponentSwaiper.module.scss";
+import { HandySvg } from "handy-svg";
 const img = [
   "/img/sw_1.jpeg",
   "/img/sw_2.jpeg",
@@ -83,13 +84,15 @@ export function ComponentSwaiper() {
   React.useEffect(() => {
     // количество элементов в первом блоке
     setMaixClick(legthItem.current.childElementCount);
-    setWidthSwipeList(widthSwipeTwo.current.offsetWidth);
+    setWidthSwipeList(widthSwipeTwo.current.offsetWidth); // очистка интервала
   }, []);
 
   return (
     <>
       <div className={styles.swiper}>
-        <div className={styles.swiper_prevBtn} onClick={onclickPrev}></div>
+        <div className={styles.swiper_prevBtn} onClick={onclickPrev}>
+          <HandySvg src="/img/btn_prev.svg" />
+        </div>
         <div className={styles.swiper_block_items}>
           <div
             ref={legthItem}
@@ -105,7 +108,9 @@ export function ComponentSwaiper() {
             })}
           </div>
         </div>
-        <div onClick={onclickNext} className={styles.swiper_nextBtn}></div>
+        <div onClick={onclickNext} className={styles.swiper_nextBtn}>
+          <HandySvg src="/img/btn_next.svg" />
+        </div>
       </div>
       <div className={styles.swiper_two}>
         <div className={styles.swiper_two__list}>

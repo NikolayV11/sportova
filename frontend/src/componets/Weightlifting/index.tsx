@@ -85,7 +85,7 @@ export function Weightlifting() {
           className="swedish-walls">
           {cards.map((item, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <CardHome heightImg={240} heightCard={396} {...item} />
               </SwiperSlide>
             );

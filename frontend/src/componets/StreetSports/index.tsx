@@ -85,7 +85,7 @@ export function StreetSports() {
           className="swedish-streetSports">
           {cards.map((item, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <CardHome heightImg={220} heightCard={396} {...item} />
               </SwiperSlide>
             );

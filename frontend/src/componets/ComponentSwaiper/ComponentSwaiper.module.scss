@@ -7,19 +7,28 @@
   &_prevBtn,
   &_nextBtn {
     position: absolute;
-    width: 56px;
-    height: 56px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.26);
+    background-color: #36383f6a;
     z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    SVG {
+      width: 6px;
+      height: 12px;
+      fill: #fff;
+    }
   }
 
   &_prevBtn {
-    left: 0;
+    left: 20px;
   }
   &_nextBtn {
     left: auto;
-    right: 0;
+    right: 20px;
   }
 
   &_block_items {
@@ -32,7 +41,7 @@
     &__list {
       display: flex;
       position: absolute;
-      transition: all 0.3s ease-out;
+      transition: all 0.8s ease-out;
       &_item {
         width: 580px;
         height: 390px;
