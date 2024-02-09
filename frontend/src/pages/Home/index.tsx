@@ -12,6 +12,7 @@ import {
   SectionCategoryHome,
   AboutCompany,
   DeliveryPay,
+  Subscription,
 } from "../../componets";
 export function Home() {
   return (
@@ -60,6 +61,9 @@ export function Home() {
       </section>
       <section>
         <DeliveryPay />
+      </section>
+      <section>
+        <Subscription />
       </section>
     </main>
   );
