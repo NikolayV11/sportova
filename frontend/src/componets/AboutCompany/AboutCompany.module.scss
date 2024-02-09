@@ -88,9 +88,41 @@
 
     &_wide {
       margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
 
       &_swiper {
         width: 580px;
+      }
+      &_info {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 30px;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          li {
+            position: relative;
+            padding-left: 25px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            color: #6e7284;
+          }
+          li:before {
+            position: absolute;
+            content: ".";
+            top: -5px;
+            left: 0;
+            color: chocolate;
+            font-weight: 700;
+            font-size: 20px;
+          }
+        }
       }
     }
   }

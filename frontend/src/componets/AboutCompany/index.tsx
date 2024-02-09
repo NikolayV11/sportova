@@ -5,7 +5,13 @@ import styles from "./AboutCompany.module.scss";
 
 import { typeCardServicesMin } from "../../Type";
 import { ComponentSwaiper } from "../index";
-
+const infoBlock: string[] = [
+  "Узкая специализация. Мы знаем больше нюансов и потребностей клиента, чем магазины, которые продают все подряд. Соответственно, сможем лучше проконсультировать и подобрать необходимый Вам комплекс;",
+  "90% ассортимента держим в наличии на складе в Нижнем Новгороде и Москве;",
+  "Выставочный зал, где все оборудование надежно закреплено. Вы можете протестировать комплексы еще до покупки;",
+  "Если Вам необходима сборка шведской стенки, детской площадки или турника – мы предоставляем такую услугу. В компании работают опытные и аккуратные специалисты. Также мы оказываем услугу по укорачиванию шведской стенки;",
+  "Если товар не подошел, Вы можете его обменять или вернуть в течение расширенного срока в 30 дней;",
+];
 const cardServicesMin: typeCardServicesMin[] = [
   { title: "Выставочный зал на 450 кв.м", imgUrl: "/img/cardServices_1.png", link: "/*" },
   { title: "90% товара в наличии на складе", imgUrl: "/img/cardServices_2.png", link: "/*" },
@@ -46,6 +52,13 @@ export function AboutCompany() {
           <div className={styles.about_company__about_services_wide}>
             <div className={styles.about_company__about_services_wide_swiper}>
               <ComponentSwaiper />
+            </div>
+            <div className={styles.about_company__about_services_wide_info}>
+              <ul>
+                {infoBlock.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
