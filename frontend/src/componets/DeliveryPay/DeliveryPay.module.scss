@@ -1,0 +1,46 @@
+.block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 100px;
+  gap: 100px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+
+  &_delivery,
+  &_pay {
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 27px;
+
+    h2 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 31px;
+      color: #1d1e22;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+
+      li {
+        span {
+          color: rgb(54, 56, 63);
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
+    }
+    a {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      color: rgb(71, 136, 255);
+    }
+  }
+}

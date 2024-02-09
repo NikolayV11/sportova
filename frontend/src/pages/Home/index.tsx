@@ -11,6 +11,7 @@ import {
   Weightlifting,
   SectionCategoryHome,
   AboutCompany,
+  DeliveryPay,
 } from "../../componets";
 export function Home() {
   return (
@@ -56,6 +57,9 @@ export function Home() {
       </section>
       <section className={styles.about_company}>
         <AboutCompany />
+      </section>
+      <section>
+        <DeliveryPay />
       </section>
     </main>
   );
