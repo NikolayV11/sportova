@@ -16,3 +16,4 @@ export * from "./AboutCompany";
 export * from "./ComponentSwaiper";
 export * from "./DeliveryPay";
 export * from "./Subscription";
+export * from "./Footer";
