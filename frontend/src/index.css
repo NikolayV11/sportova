@@ -35,11 +35,13 @@ li {
 
 .container {
   margin: 0 auto;
-  width: 1180px;
+  min-width: 320px;
+  max-width: 1180px;
 }
 .container_product {
   margin: 0 auto;
-  width: 1332px;
+  min-width: 320px;
+  max-width: 1332px;
 }
 SVG {
   /* fill: #fff; */

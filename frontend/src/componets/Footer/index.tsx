@@ -3,11 +3,19 @@ import { HandySvg } from "handy-svg";
 import { Link } from "react-router-dom";
 
 import styles from "./Footer.module.scss";
+import { Subscription } from "../index";
 export function Footer() {
   return (
     <footer className={`${styles.footer} footer`}>
+      <Subscription />
       <div className={styles.footer_top}>
-        <div className="container"></div>
+        <div className="container">
+          <div className={styles.footer_top_logo}>
+            <Link to="/">
+              <HandySvg src="/img/footer_logo.svg" />
+            </Link>
+          </div>
+        </div>
       </div>
       <div className={styles.footer_contacts}>
         <div className="container">
@@ -63,36 +71,83 @@ export function Footer() {
             <div className={styles.footer_contacts_items_catalog}>
               <h3>Каталог</h3>
               <ul className={styles.footer_contacts_items_catalog_list}>
-                <li>Шведские стенки</li>
-                <li>Турники</li>
-                <li>Уличные комплексы</li>
-                <li>Тяжелая атлетика</li>
-                <li>Единоборства</li>
-                <li>Тюбинги</li>
-                <li>Игровые домики</li>
-                <li>Фитнес</li>
-                <li>Скамьи и стойки под штангу</li>
-                <li>Сухие бассейны</li>
-                <li>Батуты</li>
-                <li>Новогодние елки</li>
+                <li>
+                  <Link to="*">Шведские стенки</Link>
+                </li>
+                <li>
+                  <Link to="*">Турники</Link>
+                </li>
+                <li>
+                  <Link to="*">Уличные комплексы</Link>
+                </li>
+                <li>
+                  <Link to="*">Тяжелая атлетика</Link>
+                </li>
+                <li>
+                  <Link to="*">Единоборства</Link>
+                </li>
+                <li>
+                  <Link to="*">Тюбинги</Link>
+                </li>
+                <li>
+                  <Link to="*">гровые домики</Link>И
+                </li>
+                <li>
+                  <Link to="*">Фитнес</Link>
+                </li>
+                <li>
+                  <Link to="*">Скамьи и стойки под штангу</Link>
+                </li>
+                <li>
+                  <Link to="*">Сухие бассейны</Link>
+                </li>
+                <li>
+                  <Link to="*">Батуты</Link>
+                </li>
+                <li>
+                  <Link to="*">Новогодние елки</Link>
+                </li>
               </ul>
             </div>
             <div className={styles.footer_contacts_items_useful}>
               <h3>Полезное</h3>
               <ul className={styles.footer_contacts_items_useful_list}>
-                <li>Обратная связь</li>
-                <li>Акции и скидки</li>
-                <li>Доставка и оплата</li>
-                <li>О нас</li>
-                <li>Контакты</li>
-                <li>Политика сайта</li>
+                <li>
+                  <Link to="*">Обратная связь</Link>
+                </li>
+                <li>
+                  <Link to="*">Акции и скидки</Link>
+                </li>
+                <li>
+                  <Link to="*">Доставка и оплата</Link>
+                </li>
+                <li>
+                  <Link to="*">О нас</Link>
+                </li>
+                <li>
+                  <Link to="*">Контакты</Link>
+                </li>
+                <li>
+                  <Link to="*">Политика сайта</Link>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.footer_button}>
-        <div className="container"></div>
+        <div className="container">
+          <div className={styles.footer_button_items}>
+            <div className={styles.footer_button_items_logo}>
+              <Link to="/">
+                <HandySvg src="/img/footer_logo.svg" />
+              </Link>
+            </div>
+            <div className={styles.footer_button_items_company}>
+              <h2>© ООО «Спортова», 2024</h2>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
