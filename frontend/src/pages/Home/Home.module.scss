@@ -8,12 +8,20 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 20px;
-      height: 480px;
-
+      // height: 480px;
+      @media (max-width: 1180px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
       &_item {
         height: 230px;
+        width: 380px;
         border-radius: 12px;
         background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         padding-left: 20px;
         display: flex;
         flex-direction: column;

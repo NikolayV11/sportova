@@ -1,16 +1,17 @@
 .swiper__block {
   display: block;
-  height: 240px;
 
+  max-width: 780px;
+  height: 480px;
   grid-row: 1 / span2;
 
   &_item {
-    border-radius: px;
+    border-radius: 12px;
     width: 100%;
     height: 100%;
-    background-origin: border-box;
+    // background-origin: border-box;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 
     h2 {

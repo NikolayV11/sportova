@@ -1,9 +1,9 @@
 .subscription {
   background-color: #0a4ecb;
-  width: 100%;
+
   &_block {
     display: flex;
-    padding: 75px 0;
+    padding: 75px 10px;
     gap: 80px;
 
     &_subscription {
@@ -44,6 +44,7 @@
           font-weight: 500;
           font-size: 15px;
           line-height: 18px;
+          padding: 0 1px;
         }
       }
 
@@ -59,6 +60,83 @@
           font-size: 15px;
           line-height: 18px;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .subscription {
+    &_block {
+      gap: 20px;
+      &_subscription {
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .subscription {
+    &_block {
+      &_subscription {
+      }
+      form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+@media (max-width: 760px) {
+  .subscription {
+    &_block {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      &_subscription {
+        justify-content: center;
+        align-items: center;
+        grid-area: 20px;
+
+        p {
+          font-size: 16px;
+        }
+        span {
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+      form {
+        width: 94%;
+        padding: 0 10px;
+        input {
+          width: 90%;
+          padding: 0 16px;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .subscription {
+    &_block {
+      &_subscription {
+        p {
+          font-size: 14px;
+        }
+        span {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+      form {
       }
     }
   }

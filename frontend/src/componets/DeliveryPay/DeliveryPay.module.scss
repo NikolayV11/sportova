@@ -7,9 +7,12 @@
   background-color: #fff;
   border-radius: 12px;
 
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   &_delivery,
   &_pay {
-    width: 460px;
+    max-width: 460px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

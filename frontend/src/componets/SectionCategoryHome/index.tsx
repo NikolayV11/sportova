@@ -19,7 +19,7 @@ export function SectionCategoryHome() {
     <div className={styles.section__category}>
       <div className="container">
         {" "}
-        <h2 className={styles.section__category_tytle}>Каталог товаров</h2>
+        <h2 className={styles.section__category_title}>Каталог товаров</h2>
         <div className={styles.section__category_block}>
           {card.map((item, index) => {
             return <CategoryMap {...item} key={index} />;

@@ -21,6 +21,9 @@ const img = [
   "/img/sw_3.jpeg",
 ];
 export function ComponentSwaiper() {
+  // ширина блока swiper
+  const widthItem = React.useRef<HTMLDivElement>();
+  const [widthItemSwiper, setWidthItemSwiper] = React.useState(580);
   //swipe 1
   const [click, setClick] = React.useState(1);
   const [maxClick, setMaixClick] = React.useState(1);
@@ -32,10 +35,10 @@ export function ComponentSwaiper() {
     console.log(`leftList:${leftList}`);
     if (click <= 1) {
       setClick(maxClick);
-      setLeftList(580 * (maxClick - 1));
+      setLeftList(widthItemSwiper * (maxClick - 1));
       return;
     }
-    setLeftList(leftList - 580);
+    setLeftList(leftList - widthItemSwiper);
   }
   function onclickNext() {
     setClick(click + 1);
@@ -44,10 +47,11 @@ export function ComponentSwaiper() {
       setClick(1);
       return;
     }
-    setLeftList(leftList + 580);
+    setLeftList(leftList + widthItemSwiper);
   }
   // swipe 2
   const widthSwipeTwo = React.useRef<any>();
+
   const [swipeTwoStatus, setSwipeTwoStatus] = React.useState(false);
   const [coordinatesSwipeTwo, setCoordinatesSwipeTwo] = React.useState(null);
   const [leftListTwo, setLeftListTwo] = React.useState(0);
@@ -77,14 +81,15 @@ export function ComponentSwaiper() {
 
   // отлеживание нажатия на изображение из swipeTwo
   function onClickSwipeTwo(index: number) {
-    setLeftList(580 * index);
+    setLeftList(widthItemSwiper * index);
     setClick(index + 1);
   }
 
   React.useEffect(() => {
     // количество элементов в первом блоке
     setMaixClick(legthItem.current.childElementCount);
-    setWidthSwipeList(widthSwipeTwo.current.offsetWidth); // очистка интервала
+    setWidthSwipeList(widthSwipeTwo.current.offsetWidth);
+    setWidthItemSwiper(widthItem.current.offsetWidth);
   }, []);
 
   return (
@@ -100,7 +105,7 @@ export function ComponentSwaiper() {
             className={styles.swiper_block_items__list}>
             {img.map((item, index) => {
               return (
-                <div key={index} className={styles.swiper_block_items__list_item}>
+                <div ref={widthItem} key={index} className={styles.swiper_block_items__list_item}>
                   <img src={item} alt="" />
                   <p>{`${click}/${maxClick}`}</p>
                 </div>
