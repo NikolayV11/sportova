@@ -23,6 +23,9 @@ const img = [
 export function ComponentSwaiper() {
   // ширина блока swiper
   const widthItem = React.useRef<HTMLDivElement>();
+  const widthList = React.useRef<HTMLDivElement>();
+  const [listWidth, setListWidth] = React.useState(0);
+  const [swipItem, setSwipItem] = React.useState(4);
   const [widthItemSwiper, setWidthItemSwiper] = React.useState(580);
   //swipe 1
   const [click, setClick] = React.useState(1);
@@ -32,7 +35,6 @@ export function ComponentSwaiper() {
 
   function onclickPrev() {
     setClick(click - 1);
-    console.log(`leftList:${leftList}`);
     if (click <= 1) {
       setClick(maxClick);
       setLeftList(widthItemSwiper * (maxClick - 1));
@@ -58,7 +60,7 @@ export function ComponentSwaiper() {
   const [widthSwipeList, setWidthSwipeList] = React.useState(0);
 
   function swipeTwoStart(clientX: any) {
-    const maxWidth = widthSwipeList - (widthSwipeList - (maxClick - 4) * 150);
+    const maxWidth = widthSwipeList - (widthSwipeList - (maxClick - swipItem) * 150);
     if (coordinatesSwipeTwo > clientX) {
       if (swipeTwoStatus) {
         setSwipeTwoStatus(false);
@@ -89,8 +91,16 @@ export function ComponentSwaiper() {
     // количество элементов в первом блоке
     setMaixClick(legthItem.current.childElementCount);
     setWidthSwipeList(widthSwipeTwo.current.offsetWidth);
+    setListWidth(widthList.current.offsetWidth);
     setWidthItemSwiper(widthItem.current.offsetWidth);
   }, []);
+  React.useEffect(() => {
+    console.log(listWidth);
+    if (listWidth === 280) return setSwipItem(2);
+    if (listWidth === 400) return setSwipItem(2.5);
+    if (listWidth === 500) return setSwipItem(3.3);
+    if (listWidth === 580) return setSwipItem(4);
+  }, [listWidth]);
 
   return (
     <>
@@ -118,7 +128,7 @@ export function ComponentSwaiper() {
         </div>
       </div>
       <div className={styles.swiper_two}>
-        <div className={styles.swiper_two__list}>
+        <div ref={widthList} className={styles.swiper_two__list}>
           <div
             ref={widthSwipeTwo}
             onDragStart={(event) => {

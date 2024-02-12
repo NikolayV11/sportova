@@ -6,10 +6,12 @@
     display: flex;
     align-items: center;
     font-weight: 500;
+
     &_items {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
     }
     &_item {
       display: flex;
