@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Header, Footer } from "./componets";
-import { NotFound, Cart, Home } from "./pages";
+import { NotFound, Cart, Home, Catalog } from "./pages";
 import { useSelector } from "react-redux";
 import { selectCount } from "./redux/catalog";
 function App() {
@@ -12,7 +12,32 @@ function App() {
       <Header />
       <div className={`${count ? "block_on" : ""} main_pages`}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <React.Suspense
+                fallback={
+                  <div>
+                    <p>загрузка</p>
+                  </div>
+                }>
+                <Home />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/category"
+            element={
+              <React.Suspense
+                fallback={
+                  <div>
+                    <p>загрузка</p>
+                  </div>
+                }>
+                <Catalog />
+              </React.Suspense>
+            }
+          />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
