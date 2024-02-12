@@ -12,7 +12,7 @@ const card: typeCategoryMap[] = [
   { title: "Стойки под штангу", img: "/img/CategoryMap/CategoryMap_5.png", link: "/*" },
   { title: "Единоборства", img: "/img/CategoryMap/CategoryMap_6.png", link: "/*" },
   { title: "Фитнес", img: "/img/CategoryMap/CategoryMap_7.png", link: "/*" },
-  { title: "Весь каталог", img: "/img/CategoryMap/CategoryMap_81.png", link: "/*" },
+  { title: "Весь каталог", img: "/img/CategoryMap/CategoryMap_81.png", link: "/category" },
 ];
 export function SectionCategoryHome() {
   return (

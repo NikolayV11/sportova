@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Header, Footer } from "./componets";
-import { NotFound, Cart, Home, Catalog } from "./pages";
+import { NotFound, Cart, Home, Category } from "./pages";
 import { useSelector } from "react-redux";
 import { selectCount } from "./redux/catalog";
 function App() {
@@ -34,7 +34,7 @@ function App() {
                     <p>загрузка</p>
                   </div>
                 }>
-                <Catalog />
+                <Category />
               </React.Suspense>
             }
           />

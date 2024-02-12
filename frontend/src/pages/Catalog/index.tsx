@@ -21,7 +21,10 @@ const category: typeCategoryMap[] = [
   { title: "Самокаты", img: "/img/CategoryMap/CategoryMap_14.png", link: "/*" },
   { title: "Велосипеды", img: "/img/CategoryMap/CategoryMap_15.png", link: "/*" },
 ];
-export function Catalog() {
+export function Category() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <div className={styles.catalog}>
       <div className="container">
