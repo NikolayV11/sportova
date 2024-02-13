@@ -65,3 +65,24 @@ SVG {
 .catalog_n {
   background-color: #000000;
 }
+
+.checkBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  input {
+  }
+  label {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #6e7284;
+  }
+}
+
+.checkBoxActive {
+  label {
+    color: #252543;
+  }
+}

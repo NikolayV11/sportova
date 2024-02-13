@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Header, Footer } from "./componets";
-import { NotFound, Cart, Home, Category } from "./pages";
+import { NotFound, Cart, Home, Category, ProductCatalog } from "./pages";
 import { useSelector } from "react-redux";
 import { selectCount } from "./redux/catalog";
 function App() {
@@ -35,6 +35,19 @@ function App() {
                   </div>
                 }>
                 <Category />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/d"
+            element={
+              <React.Suspense
+                fallback={
+                  <div>
+                    <p>загрузка</p>
+                  </div>
+                }>
+                <ProductCatalog />
               </React.Suspense>
             }
           />

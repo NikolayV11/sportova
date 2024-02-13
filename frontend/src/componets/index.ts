@@ -17,3 +17,4 @@ export * from "./ComponentSwaiper";
 export * from "./DeliveryPay";
 export * from "./Subscription";
 export * from "./Footer";
+export * from "./FilterAge";

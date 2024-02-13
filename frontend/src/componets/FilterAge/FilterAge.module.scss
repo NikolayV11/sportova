@@ -1,0 +1,32 @@
+.filter_age {
+  h4 {
+  }
+  &__items {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 16px;
+
+    &_item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      input {
+      }
+      label {
+        color: #6e7284;
+      }
+    }
+
+    &_active {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      label {
+        color: #252543;
+      }
+    }
+  }
+}
