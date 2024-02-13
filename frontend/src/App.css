@@ -23,3 +23,10 @@
 .footer {
   flex: 0 0 auto;
 }
+
+.filterTitle {
+  color: #36383f;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 33px;
+}

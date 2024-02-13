@@ -25,7 +25,7 @@ export function FilterPrice() {
   };
   return (
     <div className={`${styles.block_price}`}>
-      <h3>Цена</h3>
+      <h3 className="filterTitle">Цена</h3>
       <div className={styles.block_price_swipe}>
         <Nouislider
           onUpdate={(values) => {
@@ -40,18 +40,12 @@ export function FilterPrice() {
         />
       </div>
       <div className={styles.block_price__input}>
-        <input
-          value={minValue}
-          onChange={onChengeInputMin}
-          className={styles.block_price__input_min}
-          type="text"
-        />
-        <input
-          value={maxValue}
-          onChange={onChengeInputMax}
-          className={styles.block_price__input_max}
-          type="text"
-        />
+        <div className={styles.block_price__input_min}>
+          <input value={minValue} onChange={onChengeInputMin} type="text" />
+        </div>
+        <div className={styles.block_price__input_max}>
+          <input value={maxValue} onChange={onChengeInputMax} type="text" />
+        </div>
       </div>
     </div>
   );
