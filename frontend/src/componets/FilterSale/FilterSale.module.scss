@@ -1,0 +1,28 @@
+.sale_bloc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &_switch {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    background-color: #dedfe7;
+    border-radius: 12px;
+    cursor: pointer;
+    &_block {
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      left: 1px;
+      top: 1px;
+
+      transition: all 0.5s ease-in-out;
+    }
+    &_active {
+      transform: translateX(16px);
+      background-color: #2f73f1;
+    }
+  }
+}

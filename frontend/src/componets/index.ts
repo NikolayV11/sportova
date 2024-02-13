@@ -19,3 +19,4 @@ export * from "./Subscription";
 export * from "./Footer";
 export * from "./FilterAge";
 export * from "./FilterPrice";
+export * from "./FilterSale";
