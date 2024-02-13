@@ -1,0 +1,19 @@
+.block_price {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &__input {
+    display: flex;
+    justify-content: space-between;
+    &_min,
+    &_max {
+      border: 1px solid red;
+      width: 42px;
+      height: 30px;
+      background-color: #fff;
+    }
+  }
+  &_swipe {
+  }
+}
