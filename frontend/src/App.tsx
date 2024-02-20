@@ -39,7 +39,7 @@ function App() {
             }
           />
           <Route
-            path="/d"
+            path="/category/:title"
             element={
               <React.Suspense
                 fallback={

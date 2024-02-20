@@ -1,0 +1,15 @@
+.filter_color {
+  &_items {
+  }
+  &_list {
+    button {
+      cursor: pointer;
+      span {
+        color: #0a4ecb;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+  }
+}
