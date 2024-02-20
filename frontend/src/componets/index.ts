@@ -22,3 +22,5 @@ export * from "./FilterPrice";
 export * from "./FilterSale";
 export * from "./FilterColor";
 export * from "./FilterLoad";
+export * from "./FilterSort";
+export * from "./SortBlock";

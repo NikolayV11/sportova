@@ -1,0 +1,13 @@
+.filter_sort {
+  display: flex;
+  gap: 40px;
+
+  &__title {
+    color: #6e7284;
+  }
+
+  &__block {
+    display: flex;
+    gap: 40px;
+  }
+}

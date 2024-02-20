@@ -1,7 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { FilterAge, FilterPrice, FilterSale, FilterColor, FilterLoad } from "../../componets/index";
+import {
+  FilterAge,
+  FilterPrice,
+  FilterSale,
+  FilterColor,
+  FilterLoad,
+  FilterSort,
+} from "../../componets/index";
 
 import styles from "./ProductCatalog.module.scss";
 
@@ -32,7 +39,11 @@ export function ProductCatalog() {
               <FilterLoad />
             </div>
           </div>
-          <div className={styles.catalog__product_card}></div>
+          <div className={styles.catalog__product__card}>
+            <div className={styles.catalog__product__card_sort}>
+              <FilterSort />
+            </div>
+          </div>
         </div>
       </div>
     </div>

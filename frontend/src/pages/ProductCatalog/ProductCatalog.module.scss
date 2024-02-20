@@ -31,13 +31,14 @@
 
   &__product {
     display: flex;
+    gap: 0 98px;
     &_filter {
       width: 202px;
       display: flex;
       flex-direction: column;
       gap: 40px;
     }
-    &_card {
+    &__card {
     }
   }
 }

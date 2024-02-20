@@ -1,0 +1,45 @@
+.sort {
+  position: relative;
+  cursor: pointer;
+  &__title {
+    color: #0a4ecb;
+  }
+
+  &__block {
+    position: absolute;
+    top: 35px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: #0a4ecb;
+
+      li {
+        width: 220px;
+        padding: 4px 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:hover {
+          color: #fff;
+          background: linear-gradient(to right, RGB(29, 30, 34), 80%, RGB(10, 78, 203));
+          border-radius: 4px;
+
+          SVG {
+            stroke: #fff;
+            fill: #fff;
+          }
+        }
+
+        SVG {
+          stroke: #0a4ecb;
+          fill: #0a4ecb;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
