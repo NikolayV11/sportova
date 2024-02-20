@@ -16,14 +16,16 @@ export function FilterAge() {
       <div className={styles.filter_age__items}>
         {checkBox.map((item, idx) => (
           <div className={`checkBox ${activeCheckbox === idx ? "checkBoxActive" : ""}`} key={idx}>
-            <input
-              type="checkbox"
-              checked={idx === activeCheckbox}
-              onClick={() => {
-                setActiveCheckbox(idx);
-              }}
-            />
-            <label>{item.title}</label>
+            <label>
+              <input
+                type="checkbox"
+                checked={idx === activeCheckbox}
+                onClick={() => {
+                  setActiveCheckbox(idx);
+                }}
+              />
+              <p> {item.title}</p>
+            </label>
           </div>
         ))}
       </div>

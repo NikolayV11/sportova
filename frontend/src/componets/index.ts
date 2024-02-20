@@ -21,3 +21,4 @@ export * from "./FilterAge";
 export * from "./FilterPrice";
 export * from "./FilterSale";
 export * from "./FilterColor";
+export * from "./FilterLoad";

@@ -38,14 +38,16 @@ export function FilterColor() {
             style={{ display: `${!openList && idx > 3 ? "none" : "flex"}` }}
             className={`checkBox ${activeCheckbox[idx].status ? "checkBoxActive" : ""}`}
             key={idx}>
-            <input
-              type="checkbox"
-              // checked={true}
-              onChange={() => {
-                onChangeBox(idx);
-              }}
-            />
-            <label>{item.title}</label>
+            <label>
+              <input
+                value={item.value}
+                type="checkbox"
+                onChange={() => {
+                  onChangeBox(idx);
+                }}
+              />
+              <p>{item.title}</p>
+            </label>
           </div>
         ))}
       </div>
