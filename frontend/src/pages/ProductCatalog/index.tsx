@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import {
   FilterAge,
@@ -13,6 +13,27 @@ import {
 import styles from "./ProductCatalog.module.scss";
 
 export function ProductCatalog() {
+  const [heightCard, setHeightCard] = React.useState(null);
+  const [heightImg, setHeightImg] = React.useState(null);
+  const path = useParams();
+
+  React.useEffect(() => {
+    function heightElment() {
+      if (path.path === "swedish_walls") {
+        setHeightCard(520);
+        setHeightImg(320);
+        return;
+      } else {
+        setHeightCard(396);
+        setHeightImg(240);
+        return;
+      }
+    }
+    window.scrollTo(0, 0);
+    console.log(path);
+    console.log(heightCard, heightImg);
+    return heightElment();
+  });
   return (
     <div className={styles.catalog}>
       <div className="container">
