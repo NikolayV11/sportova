@@ -13,9 +13,36 @@ import {
 import styles from "./ProductCatalog.module.scss";
 
 export function ProductCatalog() {
+  const [titlePage, setTitlePage] = React.useState("");
   const [heightCard, setHeightCard] = React.useState(null);
   const [heightImg, setHeightImg] = React.useState(null);
   const path = useParams();
+  function loadingPage(pathPage: any) {
+    const title: any = {
+      swedish_walls: "Щведские стенки",
+      horizontal_bars: "Турники",
+      street_equipment: "Уличные комплексы",
+      weightlifting: "Тяжелая атлетика",
+      barbell_stands: "Стойки под штангу",
+      martial_arts: "Единоборства",
+      fitness: "Фитнес",
+      tubings: "Тубинги",
+      trampolines: "Батуты",
+      swimming_pools: "Бассейны",
+      backpacks_and_bags: "Рюкзаки и сумки",
+      christmas_trees: "Новогодние ёлки",
+      kids_toys: "Детские игрушки",
+      scooters: "Самокаты",
+      bicycles: "Велосипеды",
+    };
+
+    if (title.hasOwnProperty(pathPage)) {
+      setTitlePage(title[`${pathPage}`]);
+    } else {
+      console.log(pathPage);
+      window.location.pathname = "*";
+    }
+  }
 
   React.useEffect(() => {
     function heightElment() {
@@ -32,7 +59,8 @@ export function ProductCatalog() {
     window.scrollTo(0, 0);
     console.log(path);
     console.log(heightCard, heightImg);
-    return heightElment();
+    heightElment();
+    loadingPage(path.path);
   });
   return (
     <div className={styles.catalog}>
@@ -41,7 +69,7 @@ export function ProductCatalog() {
           <Link to="/">Главная</Link>
           <span>/</span> <Link to="/category">Каталог</Link>
         </div>
-        <h2>Шведские стенки</h2>
+        <h2>{titlePage}</h2>
         <div className={styles.catalog__product}>
           <div className={styles.catalog__product_filter}>
             <div className={styles.catalog__product_filter__age}>
