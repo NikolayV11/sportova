@@ -11,8 +11,11 @@ import {
 } from "../../componets/index";
 
 import styles from "./ProductCatalog.module.scss";
+import { fetchCatalog } from "../../redux/filtration";
+import { useAppDispatch } from "../../redux/store";
 
 export function ProductCatalog() {
+  const dispatch = useAppDispatch();
   const [titlePage, setTitlePage] = React.useState("");
   const [heightCard, setHeightCard] = React.useState(null);
   const [heightImg, setHeightImg] = React.useState(null);
@@ -45,6 +48,12 @@ export function ProductCatalog() {
   }
 
   React.useEffect(() => {
+    dispatch(fetchCatalog());
+    loadingPage(path.path);
+    window.scrollTo(0, 0);
+  }, []);
+
+  React.useEffect(() => {
     function heightElment() {
       if (path.path === "swedish_walls") {
         setHeightCard(520);
@@ -56,11 +65,8 @@ export function ProductCatalog() {
         return;
       }
     }
-    window.scrollTo(0, 0);
-    console.log(path);
-    console.log(heightCard, heightImg);
+
     heightElment();
-    loadingPage(path.path);
   });
   return (
     <div className={styles.catalog}>
