@@ -1,10 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const syncMysql = require("sync-mysql");
-const CONFIG = require("./config");
 const app = express();
 const PORT = 5030;
+
+const getDataSQL = require("./productRequest");
 
 app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -19,15 +19,11 @@ app.use("/public", express.static(path.resolve(__dirname + "/public")));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-function t02(path) {
-  const connection = new syncMysql(CONFIG);
-  let query = `SELECT * FROM ${path}`;
-  const result = connection.query(query);
-  return result;
-}
+
 app.get("/data/:path", (req, res) => {
-  console.log(req.params);
-  res.send(t02(req.params.path));
+  const data = req.params;
+  console.log(data);
+  res.send(getDataSQL(data.path) || 400);
 });
 
 app.listen(PORT, () => {

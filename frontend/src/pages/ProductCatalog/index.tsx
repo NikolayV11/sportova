@@ -48,8 +48,9 @@ export function ProductCatalog() {
   }
 
   React.useEffect(() => {
-    dispatch(fetchCatalog());
-    loadingPage(path.path);
+    const pathPage = path.path;
+    dispatch(fetchCatalog({ pathPage }));
+    loadingPage(pathPage);
     window.scrollTo(0, 0);
   }, []);
 
