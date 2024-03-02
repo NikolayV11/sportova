@@ -101,7 +101,7 @@ export function ProductCatalog() {
               <FilterSort />
             </div>
             <div className={styles.catalog__product__card_product}>
-              <Product />
+              <Product path={path.path} heightImg={heightImg} heightCard={heightCard} />
             </div>
           </div>
         </div>

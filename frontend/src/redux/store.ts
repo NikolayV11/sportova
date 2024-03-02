@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import catalog from "./catalog";
+import filter from "./filtration";
 export const store = configureStore({
-  reducer: { catalog },
+  reducer: { catalog, filter },
 });
 
 // store.getState - Ворачивает фенкцию содержащию store с типоми из reducer:{}

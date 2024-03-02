@@ -2,13 +2,19 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
 import axios from "axios";
-import { error } from "console";
 
-// interface CounterState {
-//   value: boolean;
-// }
+export type productType = {
+  id: number;
+  title: string;
+  price: number;
+  discount?: number;
+  urlImg: string;
+};
 
-const initialState: any = {
+type silect = {
+  items: productType[];
+};
+const initialState: silect = {
   items: [],
 };
 
@@ -21,6 +27,7 @@ export const fetchCatalog = createAsyncThunk(
     console.log("dataServer", pathPage);
     const { data } = await axios.get<any>(`http://localhost:5030/data/${pathPage}`);
     console.log(data);
+    return data;
   },
 );
 export const filtrationSlice = createSlice({
@@ -34,7 +41,13 @@ export const filtrationSlice = createSlice({
     builder // fulfilled выполнено
       .addCase(fetchCatalog.fulfilled, (state, action: PayloadAction<any>) => {
         console.log(action, "act");
-        state.items = action.payload;
+        if (action.payload) {
+          const data = action.payload;
+          state.items = data.map((item: productType) => {
+            item.urlImg = "http://localhost:5030/public/img/" + item.urlImg;
+            return item;
+          });
+        }
       }) // pending в ожидании
       .addCase(fetchCatalog.pending, (state) => {
         console.log("long");
@@ -49,6 +62,6 @@ export const filtrationSlice = createSlice({
 
 // export const { setActiveCatalog } = filtrationSlice.actions;
 
-export const selectCount = (state: RootState) => state.catalog.value;
+export const selectProductData = (state: RootState) => state.filter;
 
 export default filtrationSlice.reducer;

@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path");
 const app = express();
+const path = require("path");
 const PORT = 5030;
 
 const getDataSQL = require("./productRequest");
@@ -15,7 +15,7 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.static("public"));
-app.use("/public", express.static(path.resolve(__dirname + "/bublic")));
+app.use("/public", express.static(path.resolve(__dirname + "/public")));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
