@@ -15,7 +15,7 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.static("public"));
-app.use("/public", express.static(path.resolve(__dirname + "/public")));
+app.use("/public", express.static(path.resolve(__dirname + "/bublic")));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get("/data/:path", (req, res) => {
   const data = req.params;
   console.log(data);
-  res.send(getDataSQL(data.path) || 400);
+  res.send(getDataSQL(data.path));
 });
 
 app.listen(PORT, () => {

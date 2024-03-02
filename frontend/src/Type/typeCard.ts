@@ -5,8 +5,6 @@ export type typeCard = {
   title: string;
   urlImg: string;
   link: string;
-  price: {
-    price: number;
-    discount?: number;
-  };
+  price: number;
+  discount?: number;
 };

@@ -4,7 +4,16 @@ import { HandySvg } from "handy-svg";
 import { typeCard } from "../../Type";
 import styles from "./CardHome.module.scss";
 
-export function CardHome({ id, title, link, urlImg, price, heightImg, heightCard }: typeCard) {
+export function CardHome({
+  id,
+  title,
+  link,
+  urlImg,
+  price,
+  discount,
+  heightImg,
+  heightCard,
+}: typeCard) {
   return (
     <div key={id} style={{ height: `${heightCard}px` }} className={styles.card_item}>
       <div className={styles.card_item_block_btn}>
@@ -34,17 +43,17 @@ export function CardHome({ id, title, link, urlImg, price, heightImg, heightCard
       </Link>
       <div className={styles.card_item_block_priceBtn}>
         <div className={styles.card_item_block_priceBtn_price}>
-          {price?.discount && (
-            <p className={styles.card_item_block_priceBtn_price_discount}>{price?.discount} ₽</p>
+          {discount && (
+            <p className={styles.card_item_block_priceBtn_price_discount}>{discount} ₽</p>
           )}
-          <p className={styles.card_item_block_priceBtn_price_price}>{price.price} ₽</p>
+          <p className={styles.card_item_block_priceBtn_price_price}>{price} ₽</p>
         </div>
         <div className={styles.card_item_block_priceBtn_btn}>
           <button className={`${styles.card_item_block_priceBtn_btn_block} btnHover`}>
             <HandySvg
               className={styles.card_item_block_priceBtn_btn_block_cart}
               src="/img/card_btn_cart.svg"
-            />{" "}
+            />
             <HandySvg
               className={`${styles.card_item_block_priceBtn_btn_block_status} SVGstatus`}
               src="/img/add_hover.svg"
