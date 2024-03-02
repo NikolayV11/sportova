@@ -24,3 +24,5 @@ export * from "./FilterColor";
 export * from "./FilterLoad";
 export * from "./FilterSort";
 export * from "./SortBlock";
+export * from "./Product";
+export * from "./Constructor";

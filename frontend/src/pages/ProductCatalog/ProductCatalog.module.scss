@@ -40,6 +40,9 @@
       padding-bottom: 40px;
     }
     &__card {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Catalog.module.scss";
-import { CategoryMap, DeliveryPay } from "../../componets";
+import { CategoryMap, Constructor, DeliveryPay } from "../../componets";
 import { typeCategoryMap } from "../../Type";
 
 const category: typeCategoryMap[] = [
@@ -74,14 +74,7 @@ export function Category() {
         </div>
         <h1>Каталог товаров</h1>
         <div className={styles.catalog__list}>
-          <div
-            style={{ backgroundImage: "url(/img/constructor.png)" }}
-            className={styles.catalog__list_constructor}>
-            <h2>Соберите шведскую стенку по своему желанию!</h2>
-            <Link to="*">
-              <span>Перейти в конструктор</span>
-            </Link>
-          </div>
+          <Constructor />
           {category.map((item, index) => (
             <CategoryMap {...item} key={index} />
           ))}

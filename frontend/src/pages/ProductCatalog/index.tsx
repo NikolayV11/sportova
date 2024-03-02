@@ -8,6 +8,7 @@ import {
   FilterColor,
   FilterLoad,
   FilterSort,
+  Product,
 } from "../../componets/index";
 
 import styles from "./ProductCatalog.module.scss";
@@ -98,6 +99,9 @@ export function ProductCatalog() {
           <div className={styles.catalog__product__card}>
             <div className={styles.catalog__product__card_sort}>
               <FilterSort />
+            </div>
+            <div className={styles.catalog__product__card_product}>
+              <Product />
             </div>
           </div>
         </div>
