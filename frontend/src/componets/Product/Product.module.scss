@@ -1,0 +1,39 @@
+.product {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 20px;
+
+  &_list {
+    height: 300px !important;
+    background-position: -453px 0px !important;
+    padding-left: 14px !important;
+
+    h2 {
+      font-size: 28px !important;
+    }
+  }
+
+  &_list_on3 {
+    height: 350px !important;
+  }
+}
+
+.product_one {
+  display: block;
+  padding-bottom: 20px;
+
+  &_list {
+    height: 350px !important;
+    background-position: -350px 0px !important;
+    padding-left: 20px !important;
+    max-width: none !important;
+    width: 100% !important;
+
+    h2 {
+      font-size: 32px !important;
+      line-height: 35px !important;
+      margin-top: 65px !important;
+    }
+  }
+}

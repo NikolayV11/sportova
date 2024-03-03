@@ -8,8 +8,12 @@
   &__block {
     position: absolute;
     top: 35px;
-
+    z-index: 10;
+    background-color: #9c9d9fea;
+    border-radius: 12px;
+    border: 1px solid #969696;
     ul {
+      padding: 7px 2px;
       display: flex;
       flex-direction: column;
       gap: 10px;

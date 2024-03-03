@@ -9,8 +9,10 @@ export function Product({ heightCard, heightImg, path }: any) {
   const { items } = useSelector(selectProductData);
   console.log(items, "f1");
   return (
-    <div className={styles.product}>
-      <Constructor />
+    <div className={`${items.length > 0 ? styles.product : styles.product_one}`}>
+      <Constructor
+        classBlock={`${items.length > 0 ? styles.product_list : styles.product_one_list}`}
+      />
       {items.map((item: any, index: number) => {
         return (
           <CardHome
