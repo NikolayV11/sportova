@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ProductGallery } from "../../componets/index";
+
 import styles from "./CardProduct.module.scss";
 import { Link, useParams } from "react-router-dom";
 import { titleCategory } from "../titleCategory";
@@ -22,6 +24,12 @@ export function CardProduct() {
           <Link to={`/category/${path.path}`}>{titlePage}</Link>
           <span>/</span>
           <h3>title</h3>
+        </div>
+        <div>
+          <h2 className="titleCardProduct">title</h2>
+        </div>
+        <div className={styles.product_block}>
+          <ProductGallery />
         </div>
       </div>
     </div>

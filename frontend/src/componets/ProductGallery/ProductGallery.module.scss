@@ -1,0 +1,31 @@
+.gallery {
+  display: flex;
+  gap: 20px;
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &_img {
+      height: 100px;
+      width: 100px;
+      border-radius: 12px;
+
+      &_active {
+        height: 99px;
+        width: 99px;
+        border: 1px solid #404040;
+      }
+    }
+  }
+  &_imgBlock {
+    border-radius: 25px;
+    border: 1px solid #404040;
+    width: 560px;
+    height: 680px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

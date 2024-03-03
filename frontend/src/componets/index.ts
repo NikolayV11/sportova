@@ -26,3 +26,4 @@ export * from "./FilterSort";
 export * from "./SortBlock";
 export * from "./Product";
 export * from "./Constructor";
+export * from "./ProductGallery";
