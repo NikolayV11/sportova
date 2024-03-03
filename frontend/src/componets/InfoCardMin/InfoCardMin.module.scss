@@ -1,0 +1,69 @@
+.card_info {
+  position: sticky;
+  top: 10px;
+  height: 350px;
+  p {
+    font-weight: 400;
+    color: rgb(54, 56, 63);
+    line-height: 24px;
+  }
+  a {
+    color: #0a4ecb;
+    font-weight: 500;
+    line-height: 24px;
+    display: inline-block;
+  }
+
+  &_table {
+    margin-top: 24px;
+
+    table {
+      padding-bottom: 15px;
+      tr {
+        th {
+          text-align: start;
+          vertical-align: top;
+          line-height: 24px;
+          font-size: 15px;
+        }
+
+        th:nth-child(odd) {
+          font-weight: 400;
+          color: #6e7284;
+        }
+        th:nth-child(even) {
+          padding-left: 50px;
+          font-weight: 500;
+          color: #36383f;
+        }
+      }
+    }
+  }
+
+  &_price {
+    margin-top: 24px;
+    display: flex;
+    gap: 40px;
+    p {
+      display: inline-block;
+    }
+
+    p:nth-child(1) {
+      color: #f04716;
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 53px;
+    }
+
+    p:nth-child(2) {
+      color: #a3a6b2;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 36px;
+      text-decoration: line-through;
+    }
+  }
+  &_color {
+    margin-top: 30px;
+  }
+}

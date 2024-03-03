@@ -4,3 +4,4 @@ export * from "./typeCategoryMap";
 export * from "./typeCardServicesMin";
 export * from "./typeCheckBox";
 export * from "./typeSort";
+export * from "./typePalette";

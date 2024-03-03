@@ -1,0 +1,67 @@
+.palette {
+  position: relative;
+  p {
+    color: #36383f;
+  }
+
+  &_active {
+    margin-top: 10px;
+    width: 195px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 12px 6px;
+    border-radius: 12px;
+    gap: 5px;
+    cursor: pointer;
+    &_color {
+      width: 15px;
+      height: 15px;
+      border: 1px solid #4747477e;
+      border-radius: 50%;
+    }
+
+    SVG {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__list {
+    top: 92px;
+    width: 208px;
+    position: absolute;
+    border-radius: 12px;
+    background-color: #fff;
+    :hover {
+      background-color: #bababa;
+      border-radius: 12px;
+    }
+    &_items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 6px;
+      cursor: pointer;
+
+      &_item {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+
+        &_color {
+          width: 15px;
+          height: 15px;
+          border: 1px solid #4747477e;
+          border-radius: 50%;
+        }
+      }
+
+      SVG {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

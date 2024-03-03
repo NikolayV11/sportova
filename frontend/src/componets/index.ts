@@ -27,3 +27,6 @@ export * from "./SortBlock";
 export * from "./Product";
 export * from "./Constructor";
 export * from "./ProductGallery";
+export * from "./InfoCardMin";
+export * from "./ChoiceOfColors";
+export * from "./ColorCard";

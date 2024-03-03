@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ProductGallery } from "../../componets/index";
+import { ProductGallery, InfoCardMin } from "../../componets/index";
 
 import styles from "./CardProduct.module.scss";
 import { Link, useParams } from "react-router-dom";
@@ -30,6 +30,7 @@ export function CardProduct() {
         </div>
         <div className={styles.product_block}>
           <ProductGallery />
+          <InfoCardMin />
         </div>
       </div>
     </div>
