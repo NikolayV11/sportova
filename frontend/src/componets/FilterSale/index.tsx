@@ -6,7 +6,7 @@ export function FilterSale() {
   return (
     <div
       onClick={() => {
-        console.log(switchActive);
+        // console.log(switchActive);
         setSwitchActive(!switchActive);
       }}
       className={styles.sale_bloc}>

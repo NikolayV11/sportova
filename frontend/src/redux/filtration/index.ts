@@ -22,11 +22,10 @@ export const fetchCatalog = createAsyncThunk(
   "catalog/fetchCatalogStatus",
 
   async (params: any) => {
-    console.log(params);
     const { pathPage } = params;
-    console.log("dataServer", pathPage);
+
     const { data } = await axios.get<any>(`http://localhost:5030/data/${pathPage}`);
-    console.log(data);
+
     return data;
   },
 );

@@ -1,0 +1,17 @@
+export const titleCategory: any = {
+  swedish_walls: "Щведские стенки",
+  horizontal_bars: "Турники",
+  street_equipment: "Уличные комплексы",
+  weightlifting: "Тяжелая атлетика",
+  barbell_stands: "Стойки под штангу",
+  martial_arts: "Единоборства",
+  fitness: "Фитнес",
+  tubings: "Тубинги",
+  trampolines: "Батуты",
+  swimming_pools: "Бассейны",
+  backpacks_and_bags: "Рюкзаки и сумки",
+  christmas_trees: "Новогодние ёлки",
+  kids_toys: "Детские игрушки",
+  scooters: "Самокаты",
+  bicycles: "Велосипеды",
+};

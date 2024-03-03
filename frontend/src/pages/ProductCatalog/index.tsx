@@ -14,6 +14,7 @@ import {
 import styles from "./ProductCatalog.module.scss";
 import { fetchCatalog } from "../../redux/filtration";
 import { useAppDispatch } from "../../redux/store";
+import { titleCategory } from "../titleCategory";
 
 export function ProductCatalog() {
   const dispatch = useAppDispatch();
@@ -22,26 +23,8 @@ export function ProductCatalog() {
   const [heightImg, setHeightImg] = React.useState(null);
   const path = useParams();
   function loadingPage(pathPage: any) {
-    const title: any = {
-      swedish_walls: "Щведские стенки",
-      horizontal_bars: "Турники",
-      street_equipment: "Уличные комплексы",
-      weightlifting: "Тяжелая атлетика",
-      barbell_stands: "Стойки под штангу",
-      martial_arts: "Единоборства",
-      fitness: "Фитнес",
-      tubings: "Тубинги",
-      trampolines: "Батуты",
-      swimming_pools: "Бассейны",
-      backpacks_and_bags: "Рюкзаки и сумки",
-      christmas_trees: "Новогодние ёлки",
-      kids_toys: "Детские игрушки",
-      scooters: "Самокаты",
-      bicycles: "Велосипеды",
-    };
-
-    if (title.hasOwnProperty(pathPage)) {
-      setTitlePage(title[`${pathPage}`]);
+    if (titleCategory.hasOwnProperty(pathPage)) {
+      setTitlePage(titleCategory[`${pathPage}`]);
     } else {
       console.log(pathPage);
       window.location.pathname = "*";
@@ -73,9 +56,11 @@ export function ProductCatalog() {
   return (
     <div className={styles.catalog}>
       <div className="container">
-        <div className={styles.catalog__path}>
+        <div className="linkCategory">
           <Link to="/">Главная</Link>
           <span>/</span> <Link to="/category">Каталог</Link>
+          <span>/</span>
+          <h3>{titlePage}</h3>
         </div>
         <h2>{titlePage}</h2>
         <div className={styles.catalog__product}>

@@ -95,7 +95,7 @@ export function ComponentSwaiper() {
     setWidthItemSwiper(widthItem.current.offsetWidth);
   }, []);
   React.useEffect(() => {
-    console.log(listWidth);
+    // console.log(listWidth);
     if (listWidth === 280) return setSwipItem(2);
     if (listWidth === 400) return setSwipItem(2.5);
     if (listWidth === 500) return setSwipItem(3.3);

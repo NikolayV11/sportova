@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Header, Footer } from "./componets";
-import { NotFound, Cart, Home, Category, ProductCatalog } from "./pages";
+import { NotFound, Cart, Home, Category, ProductCatalog, CardProduct } from "./pages";
 import { useSelector } from "react-redux";
 import { selectCount } from "./redux/catalog";
 function App() {
@@ -51,6 +51,7 @@ function App() {
               </React.Suspense>
             }
           />
+          <Route path="/category/:path/:id" element={<CardProduct />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -12,8 +12,8 @@ export function FilterPrice() {
   const [startMax, setStartMax] = React.useState<any>(9999);
 
   const onChengeInputMin = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(minValue);
-    console.log(event.target.value);
+    // console.log(minValue);
+    // console.log(event.target.value);
     setMinValue(event.target.value);
     if (!Number.isNaN(event.target.value)) {
     }
