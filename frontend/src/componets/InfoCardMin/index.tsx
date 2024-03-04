@@ -54,6 +54,10 @@ export function InfoCardMin() {
           <p>Быстрый заказ</p>
         </button>
       </div>
+      <div className={styles.card_info__delivery}>
+        <HandySvg src="/img/delivery.svg" />
+        <p>Доставка в любую точку России!</p>
+      </div>
     </div>
   );
 }
