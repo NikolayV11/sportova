@@ -34,7 +34,8 @@
     position: absolute;
     border-radius: 12px;
     background-color: #fff;
-    :hover {
+    z-index: 99;
+    s :hover {
       background-color: #bababa;
       border-radius: 12px;
     }
