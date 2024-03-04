@@ -1,0 +1,47 @@
+.block {
+  height: 540px;
+  display: flex;
+  justify-content: center;
+
+  div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 90px;
+  }
+  &__item {
+    background-image: url(./page.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    &__info {
+      h1 {
+        color: #fff;
+        font-size: 34px;
+        text-shadow: 5px 2px 5px rgb(219, 3, 39);
+      }
+    }
+    &__link {
+      a {
+        background: linear-gradient(to left, rgb(255, 198, 47), rgb(240, 71, 22));
+
+        border-radius: 12px;
+
+        width: 220px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all 0.5s ease-in-out;
+      }
+
+      a:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

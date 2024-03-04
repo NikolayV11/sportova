@@ -1,8 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
-  /* width: 100vw; */
+  height: 100vh;
 }
 .block_on {
   margin: 0;
@@ -14,7 +13,6 @@
 
 .header {
   flex: 0 0 auto;
-  /* width: 100vw; */
 }
 .main_pages {
   flex: 1 0 auto;
