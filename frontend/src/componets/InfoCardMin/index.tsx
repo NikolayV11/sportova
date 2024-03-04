@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./InfoCardMin.module.scss";
 import { ChoiceOfColors } from "../index";
+import { HandySvg } from "handy-svg";
 
 export function InfoCardMin() {
   const tableInfo = [
@@ -34,6 +35,24 @@ export function InfoCardMin() {
       </div>
       <div className={styles.card_info_color}>
         <ChoiceOfColors />
+      </div>
+      <div className={styles.card_info__order}>
+        <button className={styles.card_info__order_add_basket}>
+          <div className={styles.card_info__order_add_basket__ico}>
+            <HandySvg
+              className={styles.card_info__order_add_basket__ico_cart}
+              src="/img/card_btn_cart.svg"
+            />
+            <HandySvg
+              className={`${styles.card_info__order_add_basket__ico_status} SVGstatus`}
+              src="/img/add_hover.svg"
+            />
+          </div>
+          <p>Добавить в корзину</p>
+        </button>
+        <button className={styles.card_info__order_quick_order}>
+          <p>Быстрый заказ</p>
+        </button>
       </div>
     </div>
   );
