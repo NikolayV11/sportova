@@ -27,7 +27,7 @@ export function InfoCardMin() {
             );
           })}
         </table>
-        <a>Все характеристики</a>
+        <a href="#characteristics">Все характеристики</a>
       </div>
       <div className={styles.card_info_price}>
         <p>14990 ₽</p>

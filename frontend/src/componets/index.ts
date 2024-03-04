@@ -30,3 +30,4 @@ export * from "./ProductGallery";
 export * from "./InfoCardMin";
 export * from "./ChoiceOfColors";
 export * from "./ColorCard";
+export * from "./CharacteristicsCard";

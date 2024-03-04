@@ -1,0 +1,43 @@
+.block {
+  margin-top: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+
+  width: 580px;
+  // height: 640px;
+  padding: 40px;
+
+  h3 {
+    color: #36383f;
+    font-size: 31px;
+    line-height: 38px;
+    font-weight: 500;
+  }
+
+  &__table {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &_str {
+      display: grid;
+      grid-template-columns: 180px auto;
+      gap: 40px;
+
+      &_title {
+        p {
+          font-weight: 300;
+          font-size: 15px;
+          color: rgb(127, 128, 133);
+        }
+      }
+      &_info {
+        p {
+          font-size: 14px;
+          font-weight: 600;
+          color: rgb(47, 48, 51);
+        }
+      }
+    }
+  }
+}
