@@ -4,5 +4,11 @@
   &_block {
     display: flex;
     gap: 40px;
+
+    &_info_card {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
   }
 }

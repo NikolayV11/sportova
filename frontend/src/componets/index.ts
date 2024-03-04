@@ -31,3 +31,4 @@ export * from "./InfoCardMin";
 export * from "./ChoiceOfColors";
 export * from "./ColorCard";
 export * from "./CharacteristicsCard";
+export * from "./Description";

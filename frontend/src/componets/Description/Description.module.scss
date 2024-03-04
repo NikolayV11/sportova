@@ -1,0 +1,21 @@
+.description {
+  padding: 40px;
+  width: 580px;
+  background-color: #fff;
+  border-radius: 12px;
+  &_title {
+    color: #36383f;
+    font-weight: 500;
+    font-size: 31px;
+    margin-bottom: 25px;
+  }
+  p + p {
+    margin-top: 20px;
+  }
+  p {
+    color: #36383f;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
