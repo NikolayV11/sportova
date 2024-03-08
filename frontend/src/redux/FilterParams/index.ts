@@ -9,12 +9,14 @@ type TypeStale = {
   checkBox: TypeCheckBox[];
   sale: boolean;
   filterColor: string[];
+  filterLoad: string[];
 };
 const initialState: TypeStale = {
   filterAge: { title: "Вся семья", value: "family" },
   filterPrice: { Min: 0, Max: 99999 },
   sale: false,
   filterColor: [],
+  filterLoad: [],
   checkBox: [
     { title: "Вся семья", value: "family" },
     { title: "Взрослые", value: "adults" },
@@ -46,6 +48,13 @@ export const filterParamsSlice = createSlice({
       }
       state.filterColor = state.filterColor.filter((item) => item !== action.payload.value);
     },
+    paramsFilterLoad(state, action: PayloadAction<TypeCheckBox>) {
+      if (action.payload.status) {
+        state.filterLoad.push(action.payload.value);
+        return;
+      }
+      state.filterLoad = state.filterLoad.filter((item) => item !== action.payload.value);
+    },
   },
 });
 
@@ -55,6 +64,7 @@ export const {
   paramsFilterPriceMax,
   paramsFilterSale,
   paramsFilterColor,
+  paramsFilterLoad,
 } = filterParamsSlice.actions;
 export const parametersFilters = (state: RootState) => state.FilterParams;
 

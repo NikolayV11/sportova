@@ -4,7 +4,6 @@ import type { RootState } from "../store";
 import axios from "axios";
 
 import { TypeCheckBox, TypeFilterPrice } from "../../Type";
-import { FilterColor } from "./../../componets/FilterColor/index";
 
 type typeParams = {
   pathPage: string;
@@ -12,6 +11,7 @@ type typeParams = {
   filterPrice: TypeFilterPrice;
   sale: boolean;
   filterColor: string[];
+  filterLoad: string[];
 };
 
 export type productType = {
@@ -33,14 +33,18 @@ export const fetchCatalog = createAsyncThunk(
   "catalog/fetchCatalogStatus",
 
   async (params: typeParams) => {
-    const { pathPage, filterAge, filterPrice, sale, filterColor } = params;
+    const { pathPage, filterAge, filterPrice, sale, filterColor, filterLoad } = params;
 
     let filterByAge = "";
     let filterSale = "";
     let filterColorArr = "";
+    let filterLoadArr = "";
 
     if (filterColor.length > 0) {
-      filterColorArr = `color=${filterColor}`;
+      filterColorArr = `color=[${filterColor}]`;
+    }
+    if (filterLoad.length > 0) {
+      filterLoadArr = `load=[${filterLoad}]`;
     }
 
     if (sale) {
@@ -51,7 +55,7 @@ export const fetchCatalog = createAsyncThunk(
     }
 
     const { data } = await axios.get(
-      `http://localhost:5030/data/${pathPage}?${filterByAge}&priceMin=${filterPrice.Min}&priceMax=${filterPrice.Max}&${filterSale}&${filterColorArr}`,
+      `http://localhost:5030/data/${pathPage}?${filterByAge}&priceMin=${filterPrice.Min}&priceMax=${filterPrice.Max}&${filterSale}&${filterColorArr}&${filterLoadArr}`,
     );
 
     return data;

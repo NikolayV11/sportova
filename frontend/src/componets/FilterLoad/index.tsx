@@ -1,19 +1,20 @@
 import React from "react";
 import styles from "./FilterLoad.module.scss";
 import { TypeCheckBox } from "../../Type";
-
+import { paramsFilterLoad } from "../../redux/FilterParams";
+import { useAppDispatch } from "../../redux/store";
 let checkBox: TypeCheckBox[] = [
-  { id: 0, title: "Детский, до 80 кг", value: "family", status: false },
-  { id: 1, title: "Подростки, до 100 кг", value: "adults", status: false },
-  { id: 2, title: "Взрослый, до 120 кг", value: "children's", status: false },
-  { id: 3, title: "Надежный, до 150 кг", value: "children's", status: false },
-  { id: 4, title: "Максимум, до 250 кг", value: "children's", status: false },
+  { id: 0, title: "Детский, до 80 кг", value: "80", status: false },
+  { id: 1, title: "Подростки, до 100 кг", value: "100", status: false },
+  { id: 2, title: "Взрослый, до 120 кг", value: "120", status: false },
+  { id: 3, title: "Надежный, до 150 кг", value: "150", status: false },
+  { id: 4, title: "Максимум, до 250 кг", value: "250", status: false },
 ];
 export function FilterLoad() {
+  const dispatch = useAppDispatch();
   const [activeCheckbox, setActiveCheckbox] = React.useState(checkBox);
-  const [openList, setOpenList] = React.useState(false);
 
-  function onChangeBox(index: number) {
+  function onChangeBox(index: number, value: TypeCheckBox) {
     setActiveCheckbox(
       activeCheckbox.map((item) => {
         if (item.id === index) {
@@ -22,6 +23,7 @@ export function FilterLoad() {
         return item;
       }),
     );
+    dispatch(paramsFilterLoad(value));
   }
   return (
     <div className={styles.filter_color}>
@@ -37,7 +39,7 @@ export function FilterLoad() {
                 type="checkbox"
                 // checked={true}
                 onChange={() => {
-                  onChangeBox(idx);
+                  onChangeBox(idx, item);
                 }}
               />
               <p>{item.title}</p>
