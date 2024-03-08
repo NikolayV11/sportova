@@ -9,6 +9,7 @@ type typeParams = {
   pathPage: string;
   filterAge: TypeCheckBox;
   filterPrice: TypeFilterPrice;
+  sale: boolean;
 };
 
 export type productType = {
@@ -30,17 +31,23 @@ export const fetchCatalog = createAsyncThunk(
   "catalog/fetchCatalogStatus",
 
   async (params: typeParams) => {
-    const { pathPage, filterAge, filterPrice } = params;
+    const { pathPage, filterAge, filterPrice, sale } = params;
     console.log(filterPrice);
     console.log(pathPage);
 
     let filterByAge = "";
+    let filterSale = "";
+
+    if (sale) {
+      filterSale = `sale=true`;
+      console.log(sale, "saleFilter");
+    }
     if (filterAge.value !== "family") {
       filterByAge = `filterAge=${filterAge.value}`;
     }
     console.log(filterByAge);
     const { data } = await axios.get(
-      `http://localhost:5030/data/${pathPage}?${filterByAge}&priceMin=${filterPrice.Min}&priceMax=${filterPrice.Max}`,
+      `http://localhost:5030/data/${pathPage}?${filterByAge}&priceMin=${filterPrice.Min}&priceMax=${filterPrice.Max}&${filterSale}`,
     );
 
     return data;

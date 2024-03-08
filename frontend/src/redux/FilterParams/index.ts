@@ -7,10 +7,12 @@ type TypeStale = {
   filterAge: TypeCheckBox;
   filterPrice: TypeFilterPrice;
   checkBox: TypeCheckBox[];
+  sale: boolean;
 };
 const initialState: TypeStale = {
   filterAge: { title: "Вся семья", value: "family" },
   filterPrice: { Min: 0, Max: 99999 },
+  sale: false,
   checkBox: [
     { title: "Вся семья", value: "family" },
     { title: "Взрослые", value: "adults" },
@@ -35,10 +37,14 @@ export const filterParamsSlice = createSlice({
       console.log(action.payload, "reduxMax");
       state.filterPrice.Max = action.payload;
     },
+    paramsFilterSale(state, action: PayloadAction<boolean>) {
+      console.log(action.payload, "sale");
+      state.sale = action.payload;
+    },
   },
 });
 
-export const { paramsFilterAge, paramsFilterPriceMin, paramsFilterPriceMax } =
+export const { paramsFilterAge, paramsFilterPriceMin, paramsFilterPriceMax, paramsFilterSale } =
   filterParamsSlice.actions;
 export const parametersFilters = (state: RootState) => state.FilterParams;
 

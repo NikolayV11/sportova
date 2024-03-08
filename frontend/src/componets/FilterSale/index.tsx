@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "./FilterSale.module.scss";
+import { useSelector } from "react-redux";
+import { parametersFilters, paramsFilterSale } from "../../redux/FilterParams";
+import { useAppDispatch } from "../../redux/store";
 
 export function FilterSale() {
-  const [switchActive, setSwitchActive] = React.useState(false);
+  const dispatch = useAppDispatch();
+  const { sale } = useSelector(parametersFilters);
   return (
     <div
       onClick={() => {
-        // console.log(switchActive);
-        setSwitchActive(!switchActive);
+        dispatch(paramsFilterSale(!sale));
       }}
       className={styles.sale_bloc}>
       <h4 style={{ margin: "0px" }} className="filterTitle">
@@ -16,7 +19,7 @@ export function FilterSale() {
       <div className={`${styles.sale_bloc_switch}`}>
         <div
           className={`${styles.sale_bloc_switch_block} ${
-            switchActive ? styles.sale_bloc_switch_active : ""
+            sale ? styles.sale_bloc_switch_active : ""
           }`}></div>
       </div>
     </div>
