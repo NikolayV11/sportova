@@ -3,6 +3,13 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
 import axios from "axios";
 
+import { TypeCheckBox } from "../../Type";
+
+type typeParams = {
+  pathPage: string;
+  filterAge: TypeCheckBox;
+};
+
 export type productType = {
   id: number;
   title: string;
@@ -21,25 +28,27 @@ const initialState: silect = {
 export const fetchCatalog = createAsyncThunk(
   "catalog/fetchCatalogStatus",
 
-  async (params: any) => {
-    const { pathPage } = params;
+  async (params: typeParams) => {
+    const { pathPage, filterAge } = params;
 
-    const { data } = await axios.get<any>(`http://localhost:5030/data/${pathPage}`);
+    let filterByAge = "";
+    if (filterAge.value !== "family") {
+      filterByAge = `filterAge=${filterAge.value}`;
+    }
+    console.log(filterByAge);
+    const { data } = await axios.get(`http://localhost:5030/data/${pathPage}?=${filterByAge}`);
 
     return data;
   },
 );
 export const filtrationSlice = createSlice({
   name: "catalogPage",
-
   initialState,
-  reducers: {
-    // setActiveCatalog(state, action: PayloadAction<boolean>) {},
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder // fulfilled выполнено
-      .addCase(fetchCatalog.fulfilled, (state, action: PayloadAction<any>) => {
-        console.log(action, "act");
+      .addCase(fetchCatalog.fulfilled, (state, action: PayloadAction<productType[]>) => {
+        console.log(action.payload, "act");
         if (action.payload) {
           const data = action.payload;
           state.items = data.map((item: productType) => {
@@ -59,8 +68,7 @@ export const filtrationSlice = createSlice({
   },
 });
 
-// export const { setActiveCatalog } = filtrationSlice.actions;
-
+// передаем полученные данные
 export const selectProductData = (state: RootState) => state.filter;
 
 export default filtrationSlice.reducer;

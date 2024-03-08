@@ -39,7 +39,7 @@ export function FilterSort() {
       <p className={styles.filter_sort__title}>Сортировать по:</p>
       <div className={styles.filter_sort__block}>
         {sort.map((item, index) => {
-          return <SortBlock {...item} />;
+          return <SortBlock key={index} {...item} />;
         })}
       </div>
     </div>

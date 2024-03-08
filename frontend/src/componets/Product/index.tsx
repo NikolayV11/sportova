@@ -4,7 +4,6 @@ import styles from "./Product.module.scss";
 
 import { Constructor, CardHome } from "../index";
 import { selectProductData } from "../../redux/filtration";
-import { useParams } from "react-router-dom";
 
 export function Product({ heightCard, heightImg, path }: any) {
   const { items } = useSelector(selectProductData);

@@ -6,10 +6,7 @@ import "nouislider/distribute/nouislider.css";
 import "./style.css";
 export function FilterPrice() {
   const [minValue, setMinValue] = React.useState<any>(0);
-  const [maxValue, setMaxValue] = React.useState<any>(9999);
-
-  const [startMin, setStartMin] = React.useState<any>(0);
-  const [startMax, setStartMax] = React.useState<any>(9999);
+  const [maxValue, setMaxValue] = React.useState<any>(99999);
 
   const onChengeInputMin = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(minValue);
@@ -33,7 +30,7 @@ export function FilterPrice() {
             setMaxValue(Math.floor(values[1]));
           }}
           className={`${styles.block_price_input} inputPrice`}
-          range={{ min: [0], max: [9999] }}
+          range={{ min: [0], max: [99999] }}
           step={1}
           start={[minValue, maxValue]}
           connect={true}

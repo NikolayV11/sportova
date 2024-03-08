@@ -3,14 +3,14 @@ import { TypeCheckBox } from "../../Type";
 import styles from "./FilterColor.module.scss";
 
 let checkBox: TypeCheckBox[] = [
-  { id: 0, title: "Антик-серебро", value: "family", status: false },
-  { id: 1, title: "Бежевый", value: "adults", status: false },
-  { id: 2, title: "Белый, желтый", value: "children's", status: false },
-  { id: 3, title: "Зелёный", value: "children's", status: false },
-  { id: 4, title: "Красный", value: "children's", status: false },
-  { id: 5, title: "Красный, желтый", value: "children's", status: false },
-  { id: 6, title: "Белый, черный", value: "children's", status: false },
-  { id: 7, title: "Желтый, черный", value: "children's", status: false },
+  { id: 0, title: "Антик-серебро", value: "серебро", status: false },
+  { id: 1, title: "Бежевый", value: "бежевый", status: false },
+  { id: 2, title: "Белый, желтый", value: "бело-желтый", status: false },
+  { id: 3, title: "Зелёный", value: "зеленый", status: false },
+  { id: 4, title: "Красный", value: "красный", status: false },
+  { id: 5, title: "Красный, желтый", value: "красно-желтый", status: false },
+  { id: 6, title: "Белый, черный", value: "бело-черный", status: false },
+  { id: 7, title: "Желтый, черный", value: "желто-черный", status: false },
 ];
 
 export function FilterColor() {
@@ -23,6 +23,7 @@ export function FilterColor() {
         if (item.id === index) {
           item.status = !item.status;
         }
+        console.log(item, "fun");
         return item;
       }),
     );

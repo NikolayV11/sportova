@@ -10,7 +10,9 @@ export function FilterSale() {
         setSwitchActive(!switchActive);
       }}
       className={styles.sale_bloc}>
-      <h4 className="filterTitle">Распродажа</h4>
+      <h4 style={{ margin: "0px" }} className="filterTitle">
+        Распродажа
+      </h4>
       <div className={`${styles.sale_bloc_switch}`}>
         <div
           className={`${styles.sale_bloc_switch_block} ${
