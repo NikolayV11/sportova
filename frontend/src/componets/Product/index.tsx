@@ -16,16 +16,14 @@ export function Product({
   heightImg: number;
   path: string;
 }) {
-  const { filterAge, filterPrice, sale } = useSelector(parametersFilters);
+  const { filterAge, filterPrice, sale, filterColor } = useSelector(parametersFilters);
   const dispatch = useAppDispatch();
   const { items } = useSelector(selectProductData);
 
-  console.log(path);
-
   React.useEffect(() => {
     const pathPage = path;
-    dispatch(fetchCatalog({ pathPage, filterAge, filterPrice, sale }));
-  }, [filterAge, filterPrice, sale]);
+    dispatch(fetchCatalog({ pathPage, filterAge, filterPrice, sale, filterColor }));
+  }, [filterAge, filterPrice, sale, filterColor]);
   return (
     <div className={`${items.length > 0 ? styles.product : styles.product_one}`}>
       <Constructor

@@ -4,12 +4,14 @@ import type { RootState } from "../store";
 import axios from "axios";
 
 import { TypeCheckBox, TypeFilterPrice } from "../../Type";
+import { FilterColor } from "./../../componets/FilterColor/index";
 
 type typeParams = {
   pathPage: string;
   filterAge: TypeCheckBox;
   filterPrice: TypeFilterPrice;
   sale: boolean;
+  filterColor: string[];
 };
 
 export type productType = {
@@ -31,23 +33,25 @@ export const fetchCatalog = createAsyncThunk(
   "catalog/fetchCatalogStatus",
 
   async (params: typeParams) => {
-    const { pathPage, filterAge, filterPrice, sale } = params;
-    console.log(filterPrice);
-    console.log(pathPage);
+    const { pathPage, filterAge, filterPrice, sale, filterColor } = params;
 
     let filterByAge = "";
     let filterSale = "";
+    let filterColorArr = "";
+
+    if (filterColor.length > 0) {
+      filterColorArr = `color=${filterColor}`;
+    }
 
     if (sale) {
       filterSale = `sale=true`;
-      console.log(sale, "saleFilter");
     }
     if (filterAge.value !== "family") {
       filterByAge = `filterAge=${filterAge.value}`;
     }
-    console.log(filterByAge);
+
     const { data } = await axios.get(
-      `http://localhost:5030/data/${pathPage}?${filterByAge}&priceMin=${filterPrice.Min}&priceMax=${filterPrice.Max}&${filterSale}`,
+      `http://localhost:5030/data/${pathPage}?${filterByAge}&priceMin=${filterPrice.Min}&priceMax=${filterPrice.Max}&${filterSale}&${filterColorArr}`,
     );
 
     return data;
@@ -60,7 +64,7 @@ export const filtrationSlice = createSlice({
   extraReducers: (builder) => {
     builder // fulfilled выполнено
       .addCase(fetchCatalog.fulfilled, (state, action: PayloadAction<productType[]>) => {
-        console.log(action.payload, "act");
+        // console.log("act");
         if (action.payload) {
           const data = action.payload;
           state.items = data.map((item: productType) => {
@@ -70,11 +74,11 @@ export const filtrationSlice = createSlice({
         }
       }) // pending в ожидании
       .addCase(fetchCatalog.pending, (state) => {
-        console.log("long");
+        // console.log("long");
         state.items = [];
       }) // rejected отклоненный
       .addCase(fetchCatalog.rejected, (state) => {
-        console.log("err");
+        // console.log("err");
         state.items = [];
       });
   },

@@ -2,6 +2,9 @@ import React from "react";
 import { TypeCheckBox } from "../../Type";
 import styles from "./FilterColor.module.scss";
 
+import { useAppDispatch } from "../../redux/store";
+import { paramsFilterColor } from "../../redux/FilterParams";
+
 let checkBox: TypeCheckBox[] = [
   { id: 0, title: "Антик-серебро", value: "серебро", status: false },
   { id: 1, title: "Бежевый", value: "бежевый", status: false },
@@ -14,19 +17,20 @@ let checkBox: TypeCheckBox[] = [
 ];
 
 export function FilterColor() {
+  const dispatch = useAppDispatch();
   const [activeCheckbox, setActiveCheckbox] = React.useState(checkBox);
   const [openList, setOpenList] = React.useState(false);
 
-  function onChangeBox(index: number) {
+  function onChangeBox(index: number, color: TypeCheckBox) {
     setActiveCheckbox(
       activeCheckbox.map((item) => {
         if (item.id === index) {
           item.status = !item.status;
         }
-        console.log(item, "fun");
         return item;
       }),
     );
+    dispatch(paramsFilterColor(color));
   }
   return (
     <div className={styles.filter_color}>
@@ -44,7 +48,7 @@ export function FilterColor() {
                 value={item.value}
                 type="checkbox"
                 onChange={() => {
-                  onChangeBox(idx);
+                  onChangeBox(idx, item);
                 }}
               />
               <p>{item.title}</p>
@@ -58,7 +62,7 @@ export function FilterColor() {
             setOpenList(!openList);
             console.log(openList);
           }}>
-          <span>показать болше</span>
+          <span>показать {openList ? "меньше" : "болше"}</span>
         </button>
       </div>
     </div>

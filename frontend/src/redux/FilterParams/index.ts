@@ -8,11 +8,13 @@ type TypeStale = {
   filterPrice: TypeFilterPrice;
   checkBox: TypeCheckBox[];
   sale: boolean;
+  filterColor: string[];
 };
 const initialState: TypeStale = {
   filterAge: { title: "Вся семья", value: "family" },
   filterPrice: { Min: 0, Max: 99999 },
   sale: false,
+  filterColor: [],
   checkBox: [
     { title: "Вся семья", value: "family" },
     { title: "Взрослые", value: "adults" },
@@ -26,26 +28,34 @@ export const filterParamsSlice = createSlice({
   initialState,
   reducers: {
     paramsFilterAge(state, action: PayloadAction<TypeCheckBox>) {
-      console.log(action.payload);
       state.filterAge = action.payload;
     },
     paramsFilterPriceMin(state, action: PayloadAction<number>) {
-      console.log(action.payload, "reduxMin");
       state.filterPrice.Min = action.payload;
     },
     paramsFilterPriceMax(state, action: PayloadAction<number>) {
-      console.log(action.payload, "reduxMax");
       state.filterPrice.Max = action.payload;
     },
     paramsFilterSale(state, action: PayloadAction<boolean>) {
-      console.log(action.payload, "sale");
       state.sale = action.payload;
+    },
+    paramsFilterColor(state, action: PayloadAction<TypeCheckBox>) {
+      if (action.payload.status) {
+        state.filterColor.push(action.payload.value);
+        return;
+      }
+      state.filterColor = state.filterColor.filter((item) => item !== action.payload.value);
     },
   },
 });
 
-export const { paramsFilterAge, paramsFilterPriceMin, paramsFilterPriceMax, paramsFilterSale } =
-  filterParamsSlice.actions;
+export const {
+  paramsFilterAge,
+  paramsFilterPriceMin,
+  paramsFilterPriceMax,
+  paramsFilterSale,
+  paramsFilterColor,
+} = filterParamsSlice.actions;
 export const parametersFilters = (state: RootState) => state.FilterParams;
 
 export default filterParamsSlice.reducer;

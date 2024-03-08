@@ -18,7 +18,6 @@ export function FilterPrice() {
   function paramsValue(value: number, index: number) {
     const setValue = [paramsFilterPriceMin, paramsFilterPriceMax];
     dispatch(setValue[index](value));
-    console.log(value, index, "foc");
   }
   React.useEffect(() => {}, [filterPrice]);
 
