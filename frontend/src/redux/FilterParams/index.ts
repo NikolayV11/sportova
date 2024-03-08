@@ -1,10 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
-import { TypeCheckBox } from "../../Type";
+import { TypeCheckBox, TypeFilterPrice } from "../../Type";
 
-const initialState = {
+type TypeStale = {
+  filterAge: TypeCheckBox;
+  filterPrice: TypeFilterPrice;
+  checkBox: TypeCheckBox[];
+};
+const initialState: TypeStale = {
   filterAge: { title: "Вся семья", value: "family" },
+  filterPrice: { Min: 0, Max: 99999 },
   checkBox: [
     { title: "Вся семья", value: "family" },
     { title: "Взрослые", value: "adults" },
@@ -21,10 +27,19 @@ export const filterParamsSlice = createSlice({
       console.log(action.payload);
       state.filterAge = action.payload;
     },
+    paramsFilterPriceMin(state, action: PayloadAction<number>) {
+      console.log(action.payload, "reduxMin");
+      state.filterPrice.Min = action.payload;
+    },
+    paramsFilterPriceMax(state, action: PayloadAction<number>) {
+      console.log(action.payload, "reduxMax");
+      state.filterPrice.Max = action.payload;
+    },
   },
 });
 
-export const { paramsFilterAge } = filterParamsSlice.actions;
+export const { paramsFilterAge, paramsFilterPriceMin, paramsFilterPriceMax } =
+  filterParamsSlice.actions;
 export const parametersFilters = (state: RootState) => state.FilterParams;
 
 export default filterParamsSlice.reducer;

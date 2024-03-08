@@ -4,44 +4,53 @@ import Nouislider from "nouislider-react";
 import "nouislider/distribute/nouislider.css";
 
 import "./style.css";
+import { useSelector } from "react-redux";
+import {
+  parametersFilters,
+  paramsFilterPriceMin,
+  paramsFilterPriceMax,
+} from "../../redux/FilterParams";
+import { useAppDispatch } from "../../redux/store";
 export function FilterPrice() {
-  const [minValue, setMinValue] = React.useState<any>(0);
-  const [maxValue, setMaxValue] = React.useState<any>(99999);
+  const { filterPrice } = useSelector(parametersFilters);
+  const dispatch = useAppDispatch();
 
-  const onChengeInputMin = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // console.log(minValue);
-    // console.log(event.target.value);
-    setMinValue(event.target.value);
-    if (!Number.isNaN(event.target.value)) {
-    }
-  };
-  const onChengeInputMax = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMaxValue(event.target.value);
-    if (!Number.isNaN(event.target.value)) {
-    }
-  };
+  function paramsValue(value: number, index: number) {
+    const setValue = [paramsFilterPriceMin, paramsFilterPriceMax];
+    dispatch(setValue[index](value));
+    console.log(value, index, "foc");
+  }
+  React.useEffect(() => {}, [filterPrice]);
+
   return (
     <div className={`${styles.block_price}`}>
       <h3 className="filterTitle">Цена</h3>
       <div className={styles.block_price_swipe}>
         <Nouislider
-          onUpdate={(values) => {
-            setMinValue(Math.floor(values[0]));
-            setMaxValue(Math.floor(values[1]));
+          onUpdate={(values, handle) => {
+            paramsValue(Math.floor(values[handle]), handle);
           }}
           className={`${styles.block_price_input} inputPrice`}
           range={{ min: [0], max: [99999] }}
           step={1}
-          start={[minValue, maxValue]}
+          start={[filterPrice.Min, filterPrice.Max]}
           connect={true}
         />
       </div>
       <div className={styles.block_price__input}>
         <div className={styles.block_price__input_min}>
-          <input value={minValue} onChange={onChengeInputMin} type="text" />
+          <input
+            value={filterPrice.Min}
+            onChange={(e) => paramsValue(+e.target.value, 0)}
+            type="text"
+          />
         </div>
         <div className={styles.block_price__input_max}>
-          <input value={maxValue} onChange={onChengeInputMax} type="text" />
+          <input
+            value={filterPrice.Max}
+            onChange={(e) => paramsValue(+e.target.value, 1)}
+            type="text"
+          />
         </div>
       </div>
     </div>

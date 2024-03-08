@@ -21,8 +21,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/data/:path", (req, res) => {
+  console.log(req.query);
   const data = req.params;
-  console.log(data);
+  // console.log(data);
   res.send(getDataSQL(data.path));
 });
 

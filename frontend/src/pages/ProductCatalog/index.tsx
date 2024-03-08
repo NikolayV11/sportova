@@ -12,15 +12,9 @@ import {
 } from "../../componets/index";
 
 import styles from "./ProductCatalog.module.scss";
-import { fetchCatalog } from "../../redux/filtration";
-import { useAppDispatch } from "../../redux/store";
 import { titleCategory } from "../titleCategory";
-import { useSelector } from "react-redux";
-import { parametersFilters } from "../../redux/FilterParams";
 
 export function ProductCatalog() {
-  const { filterAge } = useSelector(parametersFilters);
-  const dispatch = useAppDispatch();
   const [titlePage, setTitlePage] = React.useState("");
   const [heightCard, setHeightCard] = React.useState(null);
   const [heightImg, setHeightImg] = React.useState(null);
@@ -36,10 +30,9 @@ export function ProductCatalog() {
 
   React.useEffect(() => {
     const pathPage = path.path;
-    dispatch(fetchCatalog({ pathPage, filterAge }));
     loadingPage(pathPage);
     window.scrollTo(0, 0);
-  }, [filterAge]);
+  }, []);
 
   React.useEffect(() => {
     function heightElment() {

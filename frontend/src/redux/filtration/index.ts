@@ -3,11 +3,12 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
 import axios from "axios";
 
-import { TypeCheckBox } from "../../Type";
+import { TypeCheckBox, TypeFilterPrice } from "../../Type";
 
 type typeParams = {
   pathPage: string;
   filterAge: TypeCheckBox;
+  filterPrice: TypeFilterPrice;
 };
 
 export type productType = {
@@ -29,14 +30,18 @@ export const fetchCatalog = createAsyncThunk(
   "catalog/fetchCatalogStatus",
 
   async (params: typeParams) => {
-    const { pathPage, filterAge } = params;
+    const { pathPage, filterAge, filterPrice } = params;
+    console.log(filterPrice);
+    console.log(pathPage);
 
     let filterByAge = "";
     if (filterAge.value !== "family") {
       filterByAge = `filterAge=${filterAge.value}`;
     }
     console.log(filterByAge);
-    const { data } = await axios.get(`http://localhost:5030/data/${pathPage}?=${filterByAge}`);
+    const { data } = await axios.get(
+      `http://localhost:5030/data/${pathPage}?${filterByAge}&priceMin=${filterPrice.Min}&priceMax=${filterPrice.Max}`,
+    );
 
     return data;
   },
