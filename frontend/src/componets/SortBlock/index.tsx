@@ -1,15 +1,33 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 import { HandySvg } from "handy-svg";
 import { typeSort } from "../../Type";
 import styles from "./SortBlock.module.scss";
 
-export function SortBlock({ title, value }: typeSort) {
-  const [active, setActive] = React.useState(0);
+type activeTypeSort = {
+  activeType: string;
+  setActiveType: Dispatch<SetStateAction<string>>;
+};
+export function SortBlock({
+  title,
+  value,
+  type,
+  activeType,
+  setActiveType,
+}: typeSort & activeTypeSort) {
+  const [active, setActive] = React.useState(null);
+  const [ativeSortType, setActiveSortType] = React.useState(false);
   const [open, setOpen] = React.useState(false);
 
   const sortRef = React.useRef<HTMLDivElement>();
-
+  React.useEffect(() => {
+    if (type === activeType) {
+      setActiveSortType(true);
+    } else {
+      setActiveSortType(false);
+      setActive(null);
+    }
+  }, [activeType]);
   // клик вне компоента
   React.useEffect(() => {
     const handleClickOutside = (
@@ -46,6 +64,7 @@ export function SortBlock({ title, value }: typeSort) {
                   onClick={() => {
                     setOpen(false);
                     setActive(index);
+                    setActiveType(type);
                   }}>
                   <p>{item.title}</p>
                   {active === index && <HandySvg src="/img/staticCategory.svg" />}

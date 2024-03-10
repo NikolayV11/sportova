@@ -3,8 +3,9 @@ import { useDispatch } from "react-redux";
 import catalog from "./catalog";
 import filter from "./filtration";
 import FilterParams from "./FilterParams";
+import SortRatingSlice from "./SortRating";
 export const store = configureStore({
-  reducer: { catalog, filter, FilterParams },
+  reducer: { catalog, filter, FilterParams, SortRatingSlice },
 });
 
 // store.getState - Ворачивает фенкцию содержащию store с типоми из reducer:{}

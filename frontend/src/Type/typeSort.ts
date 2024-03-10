@@ -3,7 +3,8 @@ export type typeValueSort = {
   params: string;
 };
 
-export type typeSort = {
+export interface typeSort {
+  type: string;
   title: string;
   value: typeValueSort[];
-};
+}
