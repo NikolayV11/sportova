@@ -3,6 +3,16 @@
   cursor: pointer;
   &__title {
     color: #0a4ecb;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &_active {
+      width: 10px;
+      height: 10px;
+      background-color: blue;
+      border-radius: 50%;
+    }
   }
 
   &__block {

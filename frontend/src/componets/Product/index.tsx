@@ -6,7 +6,7 @@ import { Constructor, CardHome } from "../index";
 import { fetchCatalog, selectProductData } from "../../redux/filtration";
 import { parametersFilters } from "../../redux/FilterParams";
 import { useAppDispatch } from "../../redux/store";
-import { FilterLoad } from "./../FilterLoad/index";
+import { parametersSort } from "../../redux/SortParams";
 
 export function Product({
   heightCard,
@@ -18,13 +18,25 @@ export function Product({
   path: string;
 }) {
   const { filterAge, filterPrice, sale, filterColor, filterLoad } = useSelector(parametersFilters);
+  const { type, params } = useSelector(parametersSort);
   const dispatch = useAppDispatch();
   const { items } = useSelector(selectProductData);
 
   React.useEffect(() => {
     const pathPage = path;
-    dispatch(fetchCatalog({ pathPage, filterAge, filterPrice, sale, filterColor, filterLoad }));
-  }, [filterAge, filterPrice, sale, filterColor, filterLoad]);
+    dispatch(
+      fetchCatalog({
+        pathPage,
+        filterAge,
+        filterPrice,
+        sale,
+        filterColor,
+        filterLoad,
+        type,
+        params,
+      }),
+    );
+  }, [filterAge, filterPrice, sale, filterColor, filterLoad, type, params]);
   return (
     <div className={`${items.length > 0 ? styles.product : styles.product_one}`}>
       <Constructor
@@ -32,7 +44,13 @@ export function Product({
       />
       {items.map((item: any, index: number) => {
         return (
-          <CardHome {...item} link={`${item.id}`} heightImg={heightImg} heightCard={heightCard} />
+          <CardHome
+            key={index}
+            {...item}
+            link={`${item.id}`}
+            heightImg={heightImg}
+            heightCard={heightCard}
+          />
         );
       })}
     </div>

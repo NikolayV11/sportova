@@ -1,44 +1,54 @@
 import React from "react";
 import { SortBlock } from "../index";
 import styles from "./FilterSort.module.scss";
-import { typeSort } from "../../Type";
+import { typeSort, TypeParams, TypeValueParams } from "../../Type";
+import { useAppDispatch } from "../../redux/store";
+import { setSortParamsSlice } from "../../redux/SortParams";
 const sort: typeSort[] = [
   {
     title: "Популярности",
-    type: "popularity",
+    type: TypeParams.POPULARITY,
     value: [
-      { title: "Популярности (DESC)", params: "desc" },
-      { title: "Популярности (ASC)", params: "asc" },
+      { title: "Популярности (DESC)", params: TypeValueParams.DESC },
+      { title: "Популярности (ASC)", params: TypeValueParams.ASC },
     ],
   },
   {
     title: "Новизне",
-    type: "name",
+    type: TypeParams.NAME,
     value: [
-      { title: "По алфавиту (DESC)", params: "desc" },
-      { title: "По алфавиту (ASC)", params: "asc" },
+      { title: "По алфавиту (DESC)", params: TypeValueParams.DESC },
+      { title: "По алфавиту (ASC)", params: TypeValueParams.ASC },
     ],
   },
   {
     title: "Цене",
-    type: "price",
+    type: TypeParams.PRICE,
     value: [
-      { title: "По цене (DESC)", params: "desc" },
-      { title: "По цене (ASC)", params: "asc" },
+      { title: "По цене (DESC)", params: TypeValueParams.DESC },
+      { title: "По цене (ASC)", params: TypeValueParams.ASC },
     ],
   },
   {
     title: "Размеру скидки",
-    type: "discounts",
+    type: TypeParams.DISCOUNTS,
     value: [
-      { title: "По скидки (DESC)", params: "" },
-      { title: "По скидки (ASC)", params: "" },
+      { title: "По скидки (DESC)", params: TypeValueParams.DESC },
+      { title: "По скидки (ASC)", params: TypeValueParams.ASC },
     ],
   },
 ];
 
 export function FilterSort() {
-  const [activeType, setActiveType] = React.useState("popularity");
+  const [activeType, setActiveType] = React.useState<TypeParams>(TypeParams.POPULARITY);
+  const [activeParams, setActiveParams] = React.useState<TypeValueParams>(TypeValueParams.DESC);
+
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    dispatch(setSortParamsSlice({ params: activeParams, type: activeType }));
+  }, [activeType, activeParams]);
+
   return (
     <div className={styles.filter_sort}>
       <p className={styles.filter_sort__title}>Сортировать по:</p>
@@ -46,6 +56,7 @@ export function FilterSort() {
         {sort.map((item, index) => {
           return (
             <SortBlock
+              setActiveParams={setActiveParams}
               activeType={activeType}
               setActiveType={setActiveType}
               key={index}

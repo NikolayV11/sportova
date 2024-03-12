@@ -3,9 +3,9 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
 import axios from "axios";
 
-import { TypeCheckBox, TypeFilterPrice } from "../../Type";
+import { TypeCheckBox, TypeFilterPrice, ParamsSort } from "../../Type";
 
-type typeParams = {
+type typeParamsUrl = {
   pathPage: string;
   filterAge: TypeCheckBox;
   filterPrice: TypeFilterPrice;
@@ -32,13 +32,16 @@ const initialState: silect = {
 export const fetchCatalog = createAsyncThunk(
   "catalog/fetchCatalogStatus",
 
-  async (params: typeParams) => {
-    const { pathPage, filterAge, filterPrice, sale, filterColor, filterLoad } = params;
+  async (parames: typeParamsUrl & ParamsSort) => {
+    const { pathPage, filterAge, filterPrice, sale, filterColor, filterLoad, type, params } =
+      parames;
 
     let filterByAge = "";
     let filterSale = "";
     let filterColorArr = "";
     let filterLoadArr = "";
+    const sortParams = `${type}=${params}`;
+    console.log(type, params);
 
     if (filterColor.length > 0) {
       filterColorArr = `color=[${filterColor}]`;
@@ -55,7 +58,7 @@ export const fetchCatalog = createAsyncThunk(
     }
 
     const { data } = await axios.get(
-      `http://localhost:5030/data/${pathPage}?${filterByAge}&priceMin=${filterPrice.Min}&priceMax=${filterPrice.Max}&${filterSale}&${filterColorArr}&${filterLoadArr}`,
+      `http://localhost:5030/data/${pathPage}?${filterByAge}&priceMin=${filterPrice.Min}&priceMax=${filterPrice.Max}&${filterSale}&${filterColorArr}&${filterLoadArr}&${sortParams}`,
     );
 
     return data;
