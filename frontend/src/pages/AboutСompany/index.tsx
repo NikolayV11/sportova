@@ -49,7 +49,14 @@ export function AboutСompany() {
                 })}
               </ul>
             </div>
-            <div className={styles.block_page__company_privilege}></div>
+            <div className={styles.block_page__company_privilege}>
+              <div className={styles.block_page__company_privilege_item}>
+                <p>90% ассортимента держим в наличии на складе в Нижнем Новгороде и Москве</p>
+              </div>
+              <div className={styles.block_page__company_privilege_item}>
+                <p>Возможность вернуть или обменять товар в течение 30 дней после оплаты.</p>
+              </div>
+            </div>
             <div className={styles.block_page__company_contact}></div>
           </div>
         </div>

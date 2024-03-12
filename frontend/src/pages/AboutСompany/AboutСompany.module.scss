@@ -35,6 +35,9 @@
     }
 
     &__company {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
       &_info {
         max-width: 500px;
         padding: 40px;
@@ -74,6 +77,36 @@
             left: 2px;
             top: 10px;
           }
+        }
+      }
+
+      &_privilege {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &_item {
+          max-width: 580px;
+          height: 140px;
+          border-radius: 12px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            max-width: 380px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 23px;
+            color: #fff;
+          }
+        }
+        &_item:nth-child(1) {
+          background-color: #0a4ecb;
+        }
+
+        &_item:nth-child(2) {
+          background-color: #f04716;
         }
       }
     }
