@@ -33,5 +33,49 @@
         width: 625px;
       }
     }
+
+    &__company {
+      &_info {
+        max-width: 500px;
+        padding: 40px;
+        padding-bottom: 54px;
+        background-color: #fff;
+        border-radius: 12px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+
+        h2 {
+          font-weight: 700;
+          font-size: 31px;
+          span {
+            color: rgb(10, 78, 203);
+          }
+        }
+        ul {
+          max-width: 480px;
+
+          li {
+            position: relative;
+            padding-left: 20px;
+          }
+          li + li {
+            margin-top: 20px;
+          }
+
+          li::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: blue;
+            border-radius: 50%;
+            left: 2px;
+            top: 10px;
+          }
+        }
+      }
+    }
   }
 }
