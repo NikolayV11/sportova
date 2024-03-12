@@ -122,7 +122,7 @@ export function Footer() {
                   <Link to="*">Доставка и оплата</Link>
                 </li>
                 <li>
-                  <Link to="*">О нас</Link>
+                  <Link to="/company">О нас</Link>
                 </li>
                 <li>
                   <Link to="*">Контакты</Link>

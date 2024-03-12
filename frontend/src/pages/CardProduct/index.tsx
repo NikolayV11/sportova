@@ -39,7 +39,6 @@ export function CardProduct() {
             <CharacteristicsCard />
             <Description />
           </div>
-
           <InfoCardMin />
         </div>
       </div>

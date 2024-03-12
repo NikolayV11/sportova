@@ -4,3 +4,4 @@ export * from "./Home";
 export * from "./Catalog";
 export * from "./ProductCatalog";
 export * from "./CardProduct";
+export * from "./AboutСompany";

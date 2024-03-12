@@ -7,7 +7,7 @@ import styles from "./HeaderInfo.module.scss";
 const linkInfo = [
   { title: "Акции", link: "*" },
   { title: "Как заказать", link: "*" },
-  { title: "О компании", link: "*" },
+  { title: "О компании", link: "/company" },
   { title: "Доставка и Оплата", link: "*" },
   { title: "Гарантии", link: "*" },
   { title: "Контакты", link: "*" },
