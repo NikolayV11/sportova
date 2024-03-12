@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./AboutСompany.module.scss";
-import { Constructor } from "../../componets";
+import { ComponentSwaiper, SlideCompany } from "../../componets";
 import { Link } from "react-router-dom";
 
 export function AboutСompany() {
@@ -24,6 +24,7 @@ export function AboutСompany() {
               детских площадок.
             </p>
           </div>
+          <SlideCompany />
         </div>
       </div>
     </div>

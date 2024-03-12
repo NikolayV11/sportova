@@ -1,0 +1,24 @@
+.mySwiper2 {
+  width: 282px;
+  border-radius: 16px !important;
+  margin: 0 auto;
+  display: none;
+}
+
+@media (max-width: 556px) {
+  .mySwiper2 {
+    display: block;
+  }
+}
+
+.mySwiper2 > .swiper-button-prev {
+  left: 0px !important;
+}
+.mySwiper2 > .swiper-button-next {
+  left: auto !important;
+  right: 2px !important;
+}
+
+.mySwiper > .swiper-wrapper > .swiper-slide img {
+  border-radius: 16px !important;
+}
