@@ -1,0 +1,39 @@
+.contacts_company {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 48px;
+
+  h3 {
+    font-size: 31px;
+    font-weight: 600;
+    color: #36383f;
+  }
+  &_list {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 20px 0;
+
+    align-items: center;
+    p {
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    &_link {
+      color: blue;
+    }
+    &_info {
+      text-align: end;
+    }
+    &__social_media_items {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      SVG {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+}

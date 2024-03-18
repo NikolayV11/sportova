@@ -32,7 +32,7 @@ export function ProductCatalog() {
     const pathPage = path.path;
     loadingPage(pathPage);
     window.scrollTo(0, 0);
-  }, []);
+  }, [path]);
 
   React.useEffect(() => {
     function heightElment() {

@@ -6,10 +6,10 @@ import styles from "./HeaderNavBar.module.scss";
 import { HeaderCatalog } from "../../index";
 
 const navHeader = [
-  { title: "Шведские стенки", link: "/*" },
-  { title: "Уличные комплексы", link: "/*" },
-  { title: "Турники", link: "/*" },
-  { title: "Тяжелая атлетика", link: "/*" },
+  { title: "Шведские стенки", link: "/category/swedish_walls" },
+  { title: "Уличные комплексы", link: "/category/street_equipment" },
+  { title: "Турники", link: "/category/horizontal_bars" },
+  { title: "Тяжелая атлетика", link: "/category/weightlifting" },
 ];
 
 export function HeaderNavBar() {

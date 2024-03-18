@@ -33,3 +33,4 @@ export * from "./ColorCard";
 export * from "./CharacteristicsCard";
 export * from "./Description";
 export * from "./SlideCompany";
+export * from "./ContactsCompany";

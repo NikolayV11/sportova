@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./AboutСompany.module.scss";
-import { SlideCompany } from "../../componets";
+import { SlideCompany, ContactsCompany } from "../../componets";
 import { Link } from "react-router-dom";
 
 const infoBlock = [
@@ -56,8 +56,8 @@ export function AboutСompany() {
               <div className={styles.block_page__company_privilege_item}>
                 <p>Возможность вернуть или обменять товар в течение 30 дней после оплаты.</p>
               </div>
+              <ContactsCompany />
             </div>
-            <div className={styles.block_page__company_contact}></div>
           </div>
         </div>
       </div>

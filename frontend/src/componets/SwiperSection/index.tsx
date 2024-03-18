@@ -59,7 +59,7 @@ export function SwiperSection() {
           disableOnInteraction: true,
         }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => {
+        onSwiper={(swiper: any) => {
           swiper.updateSlidesClasses();
           // console.log(swiper);
         }}

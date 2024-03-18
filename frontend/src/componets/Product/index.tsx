@@ -36,7 +36,7 @@ export function Product({
         params,
       }),
     );
-  }, [filterAge, filterPrice, sale, filterColor, filterLoad, type, params]);
+  }, [filterAge, filterPrice, sale, filterColor, filterLoad, type, params, path]);
   return (
     <div className={`${items.length > 0 ? styles.product : styles.product_one}`}>
       <Constructor
