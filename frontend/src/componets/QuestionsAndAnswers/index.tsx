@@ -1,19 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { HandySvg } from "handy-svg";
 
 import styles from "./QuestionsAndAnswers.module.scss";
+import { TypeQuestionsAbout } from "../../Type";
 
-const info = [
-  { question: "Когда привезут мой заказ?", answer: "Информация указана в накладной" },
-  { question: "Что нужно для получения заказа?", answer: "Номер накладной" },
-  {
-    question: "Где найти чек и информацию по заказу?",
-    answer: "Прекреплена к накладной и в СМС-сообщение",
-  },
-  { question: "Как получить бесплатную доставку?", answer: "При заказе от 150 000 рублей" },
-];
-export function QuestionsAndAnswers({ classNameBlock }: any) {
+type TypeQuestionsAndAnswers = {
+  classNameBlock: any;
+  classNameBlockIndividually: any;
+  info: TypeQuestionsAbout;
+};
+
+export function QuestionsAndAnswers({
+  classNameBlock,
+  classNameBlockIndividually,
+  info,
+}: TypeQuestionsAndAnswers) {
   const [active, setActive] = React.useState<null | number>(null);
 
   const blockInfo = React.useRef();
@@ -45,7 +46,7 @@ export function QuestionsAndAnswers({ classNameBlock }: any) {
     };
   }, []);
   return (
-    <div className={`${classNameBlock} ${styles.block}`}>
+    <div className={`${classNameBlock} ${classNameBlockIndividually}`}>
       <h3>Частые вопросы по доставке</h3>
       <div ref={blockInfo} className={styles.block__container}>
         {info.map((item, index) => {

@@ -1,7 +1,4 @@
 .block {
-  height: 360px;
-  margin-top: -64px;
-
   &__container {
     margin-top: 20px;
     border: 1px solid #969696;
@@ -14,6 +11,7 @@
 
     &_items {
       padding: 18px 0;
+      position: relative;
       &_question {
         display: flex;
         align-items: center;
@@ -26,7 +24,14 @@
       }
 
       &_answer {
+        position: absolute;
         margin-top: 20px;
+        background-color: #e24c11;
+        width: 420px;
+
+        padding: 20px;
+        border-radius: 12px;
+        z-index: 10;
       }
     }
   }

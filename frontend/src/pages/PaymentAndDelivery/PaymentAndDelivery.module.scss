@@ -62,7 +62,10 @@
     grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
     grid-gap: 20px;
     align-items: start;
-
+    &_uponPayment {
+      height: 360px;
+      margin-top: -64px;
+    }
     &_items {
       h3 {
         font-weight: 800;
@@ -119,6 +122,9 @@
       align-items: start;
 
       &_item {
+        &:nth-child(3) {
+          margin-top: -90px;
+        }
         h3 {
           font-weight: 800;
           font-size: 21px;

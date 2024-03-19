@@ -1,5 +1,5 @@
 import React from "react";
-import { HandySvg } from "handy-svg";
+import { uponDelivery, uponPayment } from "./info";
 
 import styles from "./PaymentAndDelivery.module.scss";
 import { Link } from "react-router-dom";
@@ -35,7 +35,11 @@ export function PaymentAndDelivery() {
             </ul>
             <p>Оплатить в магазинах возможно наличными или переводом на карту.</p>
           </div>
-          <QuestionsAndAnswers classNameBlock={styles.block__container_items} />
+          <QuestionsAndAnswers
+            classNameBlockIndividually={styles.block__container_uponPayment}
+            classNameBlock={styles.block__container_items}
+            info={uponPayment}
+          />
 
           <div className={`${styles.block__container_items} ${styles.block__delivery_regions}`}>
             <h3>Регионы РФ</h3>
@@ -63,7 +67,11 @@ export function PaymentAndDelivery() {
                 оператора фискальных данных.
               </p>
             </div>
-
+            <QuestionsAndAnswers
+              classNameBlock={styles.block__container_payment_items_item}
+              classNameBlockIndividually={styles.block__container_payment_items_uponDelivery}
+              info={uponDelivery}
+            />
             <div
               className={`${styles.block__container_payment_items_item} ${styles.block__payment_i}`}>
               <h3>Оплата при самовывозе</h3>
