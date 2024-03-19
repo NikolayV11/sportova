@@ -2,7 +2,16 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Header, Footer } from "./componets";
-import { NotFound, Cart, Home, Category, ProductCatalog, CardProduct, AboutСompany } from "./pages";
+import {
+  NotFound,
+  Cart,
+  Home,
+  Category,
+  ProductCatalog,
+  CardProduct,
+  AboutСompany,
+  PaymentAndDelivery,
+} from "./pages";
 import { useSelector } from "react-redux";
 import { selectCount } from "./redux/catalog";
 function App() {
@@ -51,6 +60,7 @@ function App() {
               </React.Suspense>
             }
           />
+          <Route path="/Payment_and_delivery" element={<PaymentAndDelivery />} />
           <Route path="/company" element={<AboutСompany />} />
           <Route path="/category/:path/:id" element={<CardProduct />} />
           <Route path="/cart" element={<Cart />} />

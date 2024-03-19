@@ -5,3 +5,4 @@ export * from "./Catalog";
 export * from "./ProductCatalog";
 export * from "./CardProduct";
 export * from "./AboutСompany";
+export * from "./PaymentAndDelivery";

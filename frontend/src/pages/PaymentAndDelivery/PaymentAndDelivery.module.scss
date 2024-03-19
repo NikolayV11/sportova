@@ -1,0 +1,102 @@
+.block {
+  &__path {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    a {
+      color: #0a4ecb;
+      font-size: 12px;
+    }
+
+    span,
+    p {
+      font-size: 12px;
+      color: #6e7284;
+    }
+    span {
+      font-size: 8px;
+    }
+  }
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #36383f;
+    font-weight: 900;
+    font-size: 40px;
+  }
+  &__delivery {
+    &_cities {
+    }
+    &_pickup {
+      ul {
+        margin: 20px 0;
+        li + li {
+          margin-top: 20px;
+        }
+
+        li {
+          padding-left: 35px;
+          position: relative;
+        }
+
+        li:before {
+          content: "";
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          background-color: #0a4ecb;
+          border-radius: 50%;
+          left: 18px;
+          top: 7px;
+        }
+      }
+    }
+    &_regions {
+    }
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    grid-gap: 20px;
+    align-items: start;
+
+    &_items {
+      h3 {
+        font-weight: 800;
+        font-size: 21px;
+        background-image: linear-gradient(50deg, rgb(10, 78, 203), rgb(71, 136, 255) 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 15px;
+      }
+
+      p + p {
+        margin-top: 20px;
+      }
+      p {
+        line-height: 24px;
+      }
+      padding: 60px;
+      background-color: #fff;
+      border-radius: 12px;
+      max-width: 460px;
+
+      &:hover {
+        background: linear-gradient(to right, rgb(10, 78, 203), rgb(71, 136, 255));
+        h3,
+        p,
+        li {
+          -webkit-text-fill-color: #fff;
+        }
+        li:before {
+          background-color: #fff;
+        }
+        SVG {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

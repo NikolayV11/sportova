@@ -1,0 +1,41 @@
+.block {
+  height: 360px;
+  margin-top: -64px;
+
+  &__container {
+    margin-top: 20px;
+    border: 1px solid #969696;
+    border-left: none;
+    border-right: none;
+
+    &_items + &_items {
+      border-top: 1px solid #969696;
+    }
+
+    &_items {
+      padding: 18px 0;
+      &_question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        SVG {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &_answer {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.SVGActive {
+  SVG {
+    width: 10px;
+    height: 10px;
+    fill: #ee0f0f;
+  }
+}
