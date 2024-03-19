@@ -50,16 +50,27 @@ export function PaymentAndDelivery() {
             </p>
           </div>
         </div>
-        <h1>Оплата</h1>
+
         <div className={`${styles.block__payment} ${styles.block__container_payment}`}>
-          <div
-            className={`${styles.block__container_payment_items} ${styles.block__payment_i}`}></div>
-          <div
-            className={`${styles.block__container_payment_items} ${styles.block__payment_i}`}></div>
-          <div
-            className={`${styles.block__container_payment_items} ${styles.block__payment_i}`}></div>
-          <div
-            className={`${styles.block__container_payment_items} ${styles.block__payment_i}`}></div>
+          <h1>Оплата</h1>
+          <div className={styles.block__container_payment_items}>
+            <div
+              className={`${styles.block__container_payment_items_item} ${styles.block__payment_price}`}>
+              <h3>Оплата курьеру при получении</h3>
+              <p>
+                Вы можете оплатить заказ наличными при получении или переводом на карту. После
+                проведения оплаты Вам на указанный email поступит сообщение с чеком от нашего
+                оператора фискальных данных.
+              </p>
+            </div>
+
+            <div
+              className={`${styles.block__container_payment_items_item} ${styles.block__payment_i}`}>
+              <h3>Оплата при самовывозе</h3>
+              <p>Оплатить в магазинах возможно наличными или переводом на карту.</p>
+              <p>Продавец выдаст Вам кассовый и товарный чек с перечнем оплаченной продукции.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

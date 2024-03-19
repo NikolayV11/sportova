@@ -1,4 +1,5 @@
 .block {
+  padding: 15px 0 60px;
   &__path {
     padding-top: 10px;
     display: flex;
@@ -95,6 +96,62 @@
         }
         SVG {
           fill: #fff;
+        }
+      }
+    }
+  }
+
+  //оплата
+  &__container_payment {
+    h1 {
+      font-weight: 900;
+      font-size: 40px;
+      background-image: linear-gradient(50deg, rgb(240, 71, 22), rgb(255, 198, 47) 12%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    &_items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+      grid-gap: 20px;
+      align-items: start;
+
+      &_item {
+        h3 {
+          font-weight: 800;
+          font-size: 21px;
+          background-image: linear-gradient(50deg, rgb(203, 49, 10), rgb(255, 198, 47) 85%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 15px;
+        }
+
+        p + p {
+          margin-top: 20px;
+        }
+        p {
+          line-height: 24px;
+        }
+        padding: 60px;
+        background-color: #fff;
+        border-radius: 12px;
+        max-width: 460px;
+
+        &:hover {
+          background: linear-gradient(20deg, rgb(240, 71, 22), rgb(255, 198, 47));
+          h3,
+          p,
+          li {
+            -webkit-text-fill-color: #fff;
+          }
+          li:before {
+            background-color: #fff;
+          }
+          SVG {
+            fill: #fff;
+          }
         }
       }
     }
