@@ -11,6 +11,7 @@ import {
   CardProduct,
   AboutСompany,
   PaymentAndDelivery,
+  Reviews,
 } from "./pages";
 import { useSelector } from "react-redux";
 import { selectCount } from "./redux/catalog";
@@ -60,6 +61,7 @@ function App() {
               </React.Suspense>
             }
           />
+          <Route path="/reviews" element={<Reviews />} />
           <Route path="/Payment_and_delivery" element={<PaymentAndDelivery />} />
           <Route path="/company" element={<AboutСompany />} />
           <Route path="/category/:path/:id" element={<CardProduct />} />

@@ -1,0 +1,50 @@
+.block {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px 40px 40px;
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &_photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    &_info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h3 {
+        font-weight: 600;
+        font-size: 21px;
+        color: #36383f;
+      }
+      p {
+        font-size: 13px;
+        color: #6e7284;
+      }
+    }
+  }
+
+  &__commit {
+    margin-left: 100px;
+
+    p {
+      font-size: 15px;
+      color: rgb(54, 56, 63);
+      span {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
+      a {
+        color: rgb(10, 78, 203);
+      }
+    }
+  }
+}

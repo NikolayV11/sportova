@@ -9,7 +9,7 @@ const linkInfo = [
   { title: "Как заказать", link: "*" },
   { title: "О компании", link: "/company" },
   { title: "Доставка и Оплата", link: "/Payment_and_delivery" },
-  { title: "Гарантии", link: "*" },
+  { title: "Отзовы", link: "/reviews" },
   { title: "Контакты", link: "*" },
 ];
 

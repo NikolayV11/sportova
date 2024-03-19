@@ -35,3 +35,4 @@ export * from "./Description";
 export * from "./SlideCompany";
 export * from "./ContactsCompany";
 export * from "./QuestionsAndAnswers";
+export * from "./UserReviews";

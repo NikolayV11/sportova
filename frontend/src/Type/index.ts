@@ -7,3 +7,4 @@ export * from "./typeSort";
 export * from "./typePalette";
 export * from "./typeFilter";
 export * from "./typeQuestionAnswer";
+export * from "./typeUserCommit";
