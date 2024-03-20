@@ -10,7 +10,7 @@ const linkInfo = [
   { title: "О компании", link: "/company" },
   { title: "Доставка и Оплата", link: "/Payment_and_delivery" },
   { title: "Отзовы", link: "/reviews" },
-  { title: "Контакты", link: "*" },
+  { title: "Контакты", link: "/contacts" },
 ];
 
 export function HeaderInfo() {
