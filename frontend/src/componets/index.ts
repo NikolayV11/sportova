@@ -36,3 +36,4 @@ export * from "./SlideCompany";
 export * from "./ContactsCompany";
 export * from "./QuestionsAndAnswers";
 export * from "./UserReviews";
+export * from "./Map";

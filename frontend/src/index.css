@@ -152,3 +152,14 @@ p {
   font-weight: 900;
   font-size: 40px;
 }
+
+.ymaps-2-1-79-controls__control {
+  left: auto !important;
+  right: 10px !important;
+}
+
+.colorTitlePages {
+  background-image: linear-gradient(50deg, rgb(10, 78, 203), rgb(71, 136, 255) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
