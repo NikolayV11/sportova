@@ -1,8 +1,30 @@
 .cart {
+  padding: 15px 0 100px;
   &_info {
     margin: 5px auto;
     h1 {
       font-size: 56px;
+    }
+
+    &__path {
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 20px;
+      a {
+        color: #0a4ecb;
+        font-size: 12px;
+      }
+
+      span,
+      p {
+        font-size: 12px;
+        color: #6e7284;
+      }
+      span {
+        font-size: 8px;
+      }
     }
   }
 }

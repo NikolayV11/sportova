@@ -1,0 +1,114 @@
+.block {
+  max-width: 780px;
+  max-height: 300px;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  display: flex;
+  gap: 40px;
+  &__img {
+    width: 180px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_description {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h3 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    &_buy {
+      display: flex;
+      justify-content: space-between;
+      &_article {
+        display: flex;
+        align-items: end;
+        gap: 16px;
+      }
+      &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &_quantity {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          &_block {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            &_reduce,
+            &_add {
+              display: flex;
+              background-color: #dedfe7;
+              border-radius: 12px;
+              width: 36px;
+              height: 36px;
+              justify-content: center;
+              align-items: center;
+              transition: all 0.5s ease-in-out;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #007aff;
+                span {
+                  color: #ffffff;
+                }
+              }
+            }
+            &_reduce {
+              span {
+                margin-top: -1px;
+              }
+            }
+            p {
+              display: inline-flex;
+
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #dedfe7;
+              border-radius: 12px;
+              width: 48px;
+              height: 36px;
+            }
+            &_add {
+            }
+          }
+        }
+        &_price {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          &__block {
+            &_price {
+            }
+            &_discount {
+            }
+          }
+        }
+      }
+    }
+  }
+}
