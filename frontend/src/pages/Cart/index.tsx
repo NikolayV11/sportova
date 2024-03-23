@@ -18,6 +18,9 @@ export function Cart() {
           <div className={styles.cart_info__items}>
             <div className={styles.cart_info__items_list}>
               <CartMap />
+              <CartMap />
+              <CartMap />
+              <CartMap />
             </div>
             <div className={styles.cart_info__items_order}></div>
           </div>
