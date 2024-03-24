@@ -28,7 +28,12 @@
     }
 
     &__items {
+      display: flex;
+      justify-content: space-between;
       &_list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
     }
   }

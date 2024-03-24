@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HandySvg } from "handy-svg";
 
-import { CartMap } from "../../componets";
+import { CartMap, OrderPrice } from "../../componets";
 
 import styles from "./Cart.module.scss";
 export function Cart() {
@@ -21,8 +21,12 @@ export function Cart() {
               <CartMap />
               <CartMap />
               <CartMap />
+              <CartMap />
+              <CartMap />
             </div>
-            <div className={styles.cart_info__items_order}></div>
+            <div className={styles.cart_info__items_order}>
+              <OrderPrice />
+            </div>
           </div>
         </div>
       </div>

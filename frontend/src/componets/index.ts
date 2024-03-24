@@ -39,3 +39,5 @@ export * from "./UserReviews";
 export * from "./Map";
 export * from "./CartMap";
 export * from "./ExpandText";
+export * from "./OrderPrice";
+export * from "./PromoCode";
